@@ -16,12 +16,12 @@ header{
 header > ul{
     display: flex;
     list-style: none;    
-    flex: 1;
+    flex: 4;
     height: 2em;
     backdrop-filter: blur(4px);
     padding: 0.5em;
     border-radius: 0.3em;
-    background: #000007d0;
+    background:none;
 }
 
 
@@ -33,13 +33,15 @@ header > ul > li{
     margin: 0 0.2em;
     border-radius: 0.2em;
     padding: 0.3em;
+    background:none;
 }  
 
 
 header > ul > li > a{
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
+    background: none;
 } 
 
 
@@ -51,24 +53,27 @@ header > h1{
     font-family: "Foldit    ";
 }
 
+header > div{
+    flex: 1;
+}
+
 main > h1{
     margin: 0;
 }
 
 .home > h1{
     font-size: 2.5em;
-}
+    background: -webkit-linear-gradient(#179BAE,#8d05c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: tomato;  
+      }
 
 
 
 .home , footer , .services{
-    box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
-    margin: 2em 6em;
-    padding: 2em;
-    border-radius: 0.3em;
-    background: #000007e5;
-    backdrop-filter: blur(5px);
-}*/
+    margin-left: 3em
+}
 
 .home > h4{
     font-size: 1.5em;
@@ -82,7 +87,7 @@ main > h1{
 }
 
 .home a{
-    color: #179BAE ;
+    color: white ;
     padding: 0.2em;
     border-radius: 0.15em;
 }
@@ -90,13 +95,14 @@ main > h1{
 
 .home a:last-of-type{
     text-decoration: none;
-    box-shadow: inset 0px 0px 150px #8d05c2;
+    background: -webkit-linear-gradient(#179aae8e,#8d05c29a);
     color: white;
 }
 
 .home > div:first-of-type{
     padding-bottom: 2em;
     padding-top: 2em; 
+    width: 50%;
 }
 
 
@@ -104,8 +110,9 @@ main > h1{
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.384);
     padding: 1em;
     text-align: center;
-    border-radius: 0.2em;  
-    box-shadow: inset 0px 0px 150px #8d05c2;
+    border-radius: 0.2em; 
+    width: max-content; 
+    background: -webkit-linear-gradient(#179aae8e,#8d05c29a);
 }
 
 
@@ -144,16 +151,16 @@ margin-bottom: 0em;
 
 }
 
-footer{
-margin: 1em;
-}
 
 footer{ 
-    padding: 1em;
-    margin:2em 6em;
+    padding: 0  0.5em   ;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.562);
+    box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
+    background: #00000794;
+    backdrop-filter: blur(5px);
     }
 
 footer > div{ 
@@ -168,14 +175,12 @@ footer > div:first-child{
     display: flex;
     }
 
-footer a{
+footer a {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #179aae;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5em;
 }
 
 footer a:last-of-type{
@@ -208,11 +213,12 @@ footer > div:last-child{
 .services_main div{
     flex: 1;
     box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
-    background: #000007e5;
+    background: #00000794;
     backdrop-filter: blur(5px);
     margin: 0.5em;
     padding: 1em;
     border-radius: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.555);
 }
 
 
@@ -223,7 +229,7 @@ margin: 0;
 }
 
 .services_main p{
-    min-height: 7em;
+    min-height: 6em;
     margin: 0;
     }
 
