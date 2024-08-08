@@ -22,6 +22,7 @@ header > ul{
     padding: 0.5em;
     border-radius: 0.3em;
     background:none;
+    flex-wrap: wrap;
 }
 
 
@@ -61,14 +62,13 @@ main > h1{
     margin: 0;
 }
 
-.home > h1{
+.text_background{
     font-size: 2.5em;
     background: -webkit-linear-gradient(#179BAE,#8d05c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: tomato;  
       }
-
 
 
 .home , footer , .services{
@@ -210,7 +210,7 @@ footer > div:last-child{
     padding: 0;
 }
 
-.services_main div{
+.services_main div , .services{
     flex: 1;
     box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
     background: #00000794;
@@ -233,7 +233,7 @@ margin: 0;
     margin: 0;
     }
 
-.services_main a{
+.services_main a , .services a{
     text-decoration: none;
     padding: 0.2em 0.3em;
     border-radius: 0.2em;
@@ -244,3 +244,72 @@ margin: 0;
     display: flex;
     align-items: center;
     }
+
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10em ,2fr));
+    gap: 1em;
+    padding: 1em;
+    grid-template-areas: 
+        "ini ini ini ini"
+        "ai ai dw dw"
+        "ai ai db db"
+        "bd bd ds ds";
+}
+
+@media (width < 725px){
+    .services_grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10em ,2fr));
+        gap: 1em;
+        padding: 1em;
+        grid-template-areas: 
+            "ini ini"
+            "ai ai"
+            "db db"
+            "dw dw"
+            "bd bd"
+            "ds ds";
+    }
+}
+
+.services {
+    border-radius: .3em;
+    padding: 1em;
+}
+
+
+.services_grid > div:first-of-type {
+    grid-area: ini;
+}
+
+
+.services_grid > div:nth-child(2){
+    grid-area: ai;
+}
+
+
+.services_grid > div:nth-child(3){
+    grid-area: db;
+}
+
+
+.services_grid > div:nth-child(4){
+    grid-area: bd;
+}
+
+
+.services_grid > div:nth-child(5){
+    grid-area: dw;
+}
+
+.services_grid > div:nth-child(6){
+    grid-area: ds;
+}
+
+.ml1{
+    margin-left: 1em;
+}
+
+
