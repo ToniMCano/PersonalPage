@@ -24,8 +24,11 @@
 </head>
 <body>
     <header>
-        <h1>KDev</h1>
-        <ul>
+        <img src= "{% static 'core/img/logo.png' %}" alt="">
+        <ul class = "nbm">
+            <li class = "nbm">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>        
+            </li>
             <li><a href="{% url 'home' %}">Inicio</a></li>
             <li><a href="{% url 'about' %}">Sobre Mí</a></li>
             <li><a href="{% url 'services' %}">Servicios</a></li>
@@ -33,7 +36,7 @@
             <li><a href="{% url 'blog' %}">Blog</a></li>
             <li><a href="{% url 'contacto' %}">Contacto</a></li>
         </ul>
-        <div></div>
+
     </header>
     <main>
         

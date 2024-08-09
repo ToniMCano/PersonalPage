@@ -12,13 +12,17 @@ header{
     justify-content: space-between;
 }
 
+header svg{
+    padding: 0.5em;
+    display: none;
+}
+
 
 header > ul{
     display: flex;
     list-style: none;    
     flex: 4;
-    height: 2em;
-    backdrop-filter: blur(4px);
+    height: 2em;    
     padding: 0.5em;
     border-radius: 0.3em;
     background:none;
@@ -37,6 +41,9 @@ header > ul > li{
     background:none;
 }  
 
+header > ul > li:first-child{
+    background:none;
+}  
 
 header > ul > li > a{
     text-decoration: none;
@@ -46,16 +53,19 @@ header > ul > li > a{
 } 
 
 
-header > h1{
-    display: flex;
+header > img{
     flex: 1;
-    margin: 0.2em;
-    margin-left: 2em;
-    font-family: "Foldit    ";
+    margin: 2em;
+    height: 1.5em;
 }
 
 header > div{
     flex: 1;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
 }
 
 main > h1{
@@ -71,7 +81,7 @@ main > h1{
       }
 
 
-.home , footer , .services{
+.home , .services{
     margin-left: 3em
 }
 
@@ -95,7 +105,7 @@ main > h1{
 
 .home a:last-of-type{
     text-decoration: none;
-    background: -webkit-linear-gradient(#179aae8e,#8d05c29a);
+    background: -webkit-linear-gradient(#0b505a,#5e0581);
     color: white;
 }
 
@@ -109,18 +119,28 @@ main > h1{
 .home > div:nth-child(5){
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.384);
     padding: 1em;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     border-radius: 0.2em; 
-    width: max-content; 
-    background: -webkit-linear-gradient(#179aae8e,#8d05c29a);
+    margin-right: 3em;
+    width: 50%;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(#0b505a,#5e0581);
 }
+
+.home > div:nth-child(5) h3{
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+    }
 
 
 .technologies{
    /* border:1px solid cyan;*/
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3em;
+    margin: 3em 0;
 }
 
 
@@ -161,6 +181,7 @@ footer{
     box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
     background: #00000794;
     backdrop-filter: blur(5px);
+    margin-top: 1em;
     }
 
 footer > div{ 
@@ -206,32 +227,42 @@ footer > div:last-child{
 
 .services_main{
     display: flex;
-    margin: 2em 6em;
+    margin: 0em 4em;
     padding: 0;
+    flex-wrap: wrap;
 }
 
-.services_main div , .services{
+.services_main p{
+    display: flex;
+    align-items: center;
+}
+
+.services_main > div , .services{
     flex: 1;
-    box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
+    box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
     background: #00000794;
     backdrop-filter: blur(5px);
     margin: 0.5em;
     padding: 1em;
     border-radius: 0.5em;
-    border: 1px solid rgba(255, 255, 255, 0.555);
+    /*border: 1px solid rgba(255, 255, 255, 0.555);*/
 }
 
 
-.services_main  h2{
+.services_main  h3{
 font-size: 1em;
 height: 2em;
-margin: 0;
+margin: 1em 0;
+font-weight: 500;
 }
 
-.services_main p{
-    min-height: 6em;
-    margin: 0;
+
+.services_main  span{
+    font-weight: 700;
+    margin: 0.2em;
     }
+    
+    
 
 .services_main a , .services a{
     text-decoration: none;
@@ -245,11 +276,16 @@ margin: 0;
     align-items: center;
     }
 
+.services_main > div > svg{
+ position: absolute;
+ top: 1em;
+ right: 1em;
+}
 
 .services_grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(10em ,2fr));
-    gap: 1em;
+    gap: 0.5em;
     padding: 1em;
     grid-template-areas: 
         "ini ini ini ini"
@@ -258,27 +294,17 @@ margin: 0;
         "bd bd ds ds";
 }
 
-@media (width < 725px){
-    .services_grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(10em ,2fr));
-        gap: 1em;
-        padding: 1em;
-        grid-template-areas: 
-            "ini ini"
-            "ai ai"
-            "db db"
-            "dw dw"
-            "bd bd"
-            "ds ds";
-    }
-}
 
 .services {
     border-radius: .3em;
     padding: 1em;
 }
 
+/*.services > svg{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}*/
 
 .services_grid > div:first-of-type {
     grid-area: ini;
@@ -310,6 +336,138 @@ margin: 0;
 
 .ml1{
     margin-left: 1em;
+}
+
+
+.nb {
+    background: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    min-width: 50%;
+    /*border: 1px solid rgba(255, 255, 255, 0.555);* /*border: 1px solid rgba(255, 255, 255, 0.555);*/
+}
+.nb p{
+    width: 50%;
+    padding-left:1em ;
+    flex-wrap: wrap;
+}
+
+@media (width < 725px){
+    .services_grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10em ,2fr));
+        gap: 0.5em;
+        padding: 1em;
+        grid-template-areas: 
+            "ini ini"
+            "ai ai"
+            "db db"
+            "dw dw"
+            "bd bd"
+            "ds ds";
+    }
+}
+
+@media (width < 950px){
+    .home > div:nth-child(5) , .home > div:first-of-type{
+            width: 100%;
+            
+    }
+
+    .home , .services_main{
+        margin: 2em;
+        flex-wrap: wrap;
+    }
+
+    .services_main > div {
+            min-width: 40%;
+    }
+
+    .nb, .nb p{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nb p{
+       min-width: 100%;
+       display: block;
+    }
+
+    .home > div:first-of-type , main {
+        width: 100%;
+        box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
+        background: #00000794;
+        backdrop-filter: blur(5px);
+        margin: 1em 0;
+        border-radius: 0.5em;
+    }
+
+
+    header ul{
+        height: 100vh;
+        z-index: 1;
+        margin: 0;
+        position: absolute;
+        right: 1em;
+        background: none;
+        height: 3em;
+         max-width: 3em;
+         z-index: 1;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         position: fixed;
+         background: none;
+         top: 4em;
+    }
+
+    header ul > li{
+      background: none;  
+    }
+    
+    /*-------------*/
+    header svg{
+        display: block;
+        background: -webkit-linear-gradient(#179BAE,#8d05c2);
+        border-radius: 100%;
+     }
+ 
+     
+     header ul:hover{
+         height: 100vh;
+         min-width: 50vw;
+         z-index: 1;
+         margin: 0;
+         box-shadow: -1px -1px 2px rgba(142, 143, 143, 0.158);
+         padding: 0;
+         right:  0;
+         width: 100%;
+         background: #00000794;
+         backdrop-filter: blur(5px);
+         top: 0;
+
+     }
+ 
+     header ul:hover > li{
+        min-width: 100%;
+        flex: 1;
+        box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
+     }
+  
+     header ul:hover > li:first-child{
+        display: none;
+     }
+
+     
+
+     
+ 
+     header ul > li:hover{
+         box-shadow:inset -1px -1px 3em cyan;
+     }
+ 
+
 }
 
 
