@@ -1,8 +1,8 @@
 body{
-/*    background: #27283A;*/
+    background: #0D1117;
     color: white;
     font-family: "Kanit";
- 
+    margin: 0;
 }
 
 
@@ -10,6 +10,14 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background: #00000794;
+    backdrop-filter: blur(5px);
+    height: 4em;
+    align-items: center;
+    top: 0;
 }
 
 header svg{
@@ -27,6 +35,9 @@ header > ul{
     border-radius: 0.3em;
     background:none;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    
 }
 
 
@@ -55,7 +66,7 @@ header > ul > li > a{
 
 header > img{
     flex: 1;
-    margin: 2em;
+    margin: 1em;
     height: 1.5em;
 }
 
@@ -66,6 +77,7 @@ header > div{
 main{
     display: flex;
     flex-direction: column;
+    padding-top: 7em;
 }
 
 main > h1{
@@ -92,21 +104,23 @@ main > h1{
 }
 
 .home > h4:last-of-type{
-    margin-bottom: 2em;
+   
     
 }
 
 .home a{
-    color: white ;
-    padding: 0.2em;
-    border-radius: 0.15em;
+    border:1px solid #b607fc ;
+    text-decoration: none;
+    color:white;
+    border-radius: .4em;
+    padding: 0 0.5em;
 }
 
 
 .home a:last-of-type{
-    text-decoration: none;
-    background: -webkit-linear-gradient(#0b505a,#5e0581);
-    color: white;
+    
+    /*background: -webkit-linear-gradient(#0b505a,#5e0581);*/
+    border:1px solid #179BAE ;
 }
 
 .home > div:first-of-type{
@@ -126,7 +140,8 @@ main > h1{
     margin-right: 3em;
     width: 50%;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(#0b505a,#5e0581);
+    background-image: -webkit-radial-gradient(to right, #0b505a,#5e0581);
+    background-image: linear-gradient(to right, #0b505a , #5e0581);
 }
 
 .home > div:nth-child(5) h3{
@@ -214,16 +229,6 @@ footer > div:last-child{
     justify-content: flex-end;
     }
 
-.inset , .inset_2{
-    margin: 0;
-    margin-bottom: 1em;
-    box-shadow: inset 0px 0px 150px #8d05c2;
-    
-}
-
-.inset_2{
-    box-shadow: inset 0px 0px 150px #179aae;    
-}
 
 .services_main{
     display: flex;
@@ -239,20 +244,34 @@ footer > div:last-child{
 
 .services_main > div , .services{
     flex: 1;
-    box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
-    background: #00000794;
+    border: 1px solid gray;
+    background: #161B22;
     backdrop-filter: blur(5px);
     margin: 0.5em;
-    padding: 1em;
-    border-radius: 0.5em;
+    padding: 2em 1em;
+    padding-bottom: 3em;
+    border-radius: 0.3em;
     /*border: 1px solid rgba(255, 255, 255, 0.555);*/
+
+}
+
+.services > svg{
+    color: white; /* cambiar cyan */
+}
+.services_main > div p{
+margin: 0;
+margin-top: 1em;
+}
+
+.services > h2{
+    margin-right:2em;
 }
 
 
 .services_main  h3{
 font-size: 1em;
 height: 2em;
-margin: 1em 0;
+margin: 0;
 font-weight: 500;
 }
 
@@ -264,22 +283,27 @@ font-weight: 500;
     
     
 
-.services_main a , .services a{
+.services_main a , .services a , .services_grid div > a{
     text-decoration: none;
-    padding: 0.2em 0.3em;
+    padding: 0.1em;
     border-radius: 0.2em;
-    color:white;
+    border: 1px solid white; /* cambiar purple */
+    color:white;   
     position: absolute;
-    bottom: .3em;
-    right: 0.2em;
+    bottom: .5em;
+    left: 0.5em;
     display: flex;
     align-items: center;
+    background: #21262D;
     }
 
 .services_main > div > svg{
  position: absolute;
  top: 1em;
  right: 1em;
+ background: black; /*  cambiar rgba(0, 255, 255, 0.521);*/
+ border-radius: 100%;
+padding: 0.8em;
 }
 
 .services_grid {
@@ -288,16 +312,21 @@ font-weight: 500;
     gap: 0.5em;
     padding: 1em;
     grid-template-areas: 
-        "ini ini ini ini"
+        "ini ini . ."
         "ai ai dw dw"
         "ai ai db db"
         "bd bd ds ds";
 }
 
-
+.services > svg:first-of-type{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
 .services {
     border-radius: .3em;
     padding: 1em;
+    border: 1px solid gray;
 }
 
 /*.services > svg{
@@ -308,6 +337,10 @@ font-weight: 500;
 
 .services_grid > div:first-of-type {
     grid-area: ini;
+    border: 1px solid gray;
+    padding: 1em;
+    border-radius: 0.3em;
+    margin: 0.5em;
 }
 
 
@@ -334,6 +367,10 @@ font-weight: 500;
     grid-area: ds;
 }
 
+
+.services_grid > div{
+    padding-bottom: 3em;
+}
 .ml1{
     margin-left: 1em;
 }
@@ -347,10 +384,20 @@ font-weight: 500;
     min-width: 50%;
     /*border: 1px solid rgba(255, 255, 255, 0.555);* /*border: 1px solid rgba(255, 255, 255, 0.555);*/
 }
-.nb p{
-    width: 50%;
-    padding-left:1em ;
-    flex-wrap: wrap;
+
+.nb li{
+    font-size: 1.5em;
+}
+
+
+.inset , .inset_2{
+    margin-bottom: 1em;
+    background:;
+    border: 0;
+}
+
+.inset_2{
+    background:;    
 }
 
 @media (width < 725px){
@@ -429,7 +476,7 @@ font-weight: 500;
     /*-------------*/
     header svg{
         display: block;
-        background: -webkit-linear-gradient(#179BAE,#8d05c2);
+        background: -webkit-radial-gradient(#179BAE,#8d05c2);
         border-radius: 100%;
      }
  
@@ -445,7 +492,7 @@ font-weight: 500;
          width: 100%;
          background: #00000794;
          backdrop-filter: blur(5px);
-         top: 0;
+         top:-1em;
 
      }
  
@@ -464,10 +511,9 @@ font-weight: 500;
      
  
      header ul > li:hover{
-         box-shadow:inset -1px -1px 3em cyan;
+         box-shadow:inset -1px -1px 3em cyan; 
      }
  
-
 }
 
 
