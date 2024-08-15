@@ -1,10 +1,16 @@
 body{
-    background: #0D1117;
+    background: #111823;
     color: white;
     font-family: "Kanit";
     margin: 0;
 }
 
+.nada{
+    border: 1px solid #17B877;
+    box-shadow: 1px 1px 5px #8662E3;
+    color: #FFC26E;
+}
+}
 
 
 header{
@@ -245,7 +251,7 @@ footer > div:last-child{
 .services_main > div , .services{
     flex: 1;
     border: 1px solid gray;
-    background: #161B22;
+    background: #10151d ;
     backdrop-filter: blur(5px);
     margin: 0.5em;
     padding: 2em 1em;
@@ -273,12 +279,14 @@ font-size: 1em;
 height: 2em;
 margin: 0;
 font-weight: 500;
+color: #A588E5;
 }
 
 
 .services_main  span{
-    font-weight: 700;
+    
     margin: 0.2em;
+    color: #A588E5;
     }
     
     
@@ -301,7 +309,8 @@ font-weight: 500;
  position: absolute;
  top: 1em;
  right: 1em;
- background: black; /*  cambiar rgba(0, 255, 255, 0.521);*/
+ background: -webkit-linear-gradient(#179BAE,#8d05c2);
+        border-radius: 100%; /*  cambiar rgba(0, 255, 255, 0.521);*/
  border-radius: 100%;
 padding: 0.8em;
 }
@@ -335,9 +344,13 @@ padding: 0.8em;
     right: 1em;
 }*/
 
+.services_grid > div {
+border: 1px solid gray;
+}
+
 .services_grid > div:first-of-type {
+    border: 0;
     grid-area: ini;
-    border: 1px solid gray;
     padding: 1em;
     border-radius: 0.3em;
     margin: 0.5em;
@@ -377,16 +390,33 @@ padding: 0.8em;
 
 
 .nb {
-    background: none;
+    background: #080A0E;
     display: flex;
     justify-content: center;
     flex: 1;
     min-width: 50%;
+    border-radius: 0.4em;
     /*border: 1px solid rgba(255, 255, 255, 0.555);* /*border: 1px solid rgba(255, 255, 255, 0.555);*/
 }
 
+.nb > ul{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 1em;
+   border: 1px solid #17B877;
+   box-shadow: 1px 1px 5px #8662E3;
+
+}
+
 .nb li{
-    font-size: 1.5em;
+    
+    background: #111A28;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #25A6E9 ;
+    border-radius: 0.2em;
+    color: #FFC26E;
 }
 
 
