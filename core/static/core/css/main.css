@@ -1,9 +1,9 @@
 body{
     background: #111823;
     color: white;
-    font-family: "Kanit";
+    font-family: "Poppins";
     margin: 0;
-    background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;*/
+    /*background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;*/
     /*background: radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #DB00FF 0%, #000000 100%), linear-gradient(45deg, #241E92 0%, #241E92 40%, #5432D3 40%, #5432D3 50%, #7B6CF6 50%, #7B6CF6 70%, #E5A5FF 70%, #E5A5FF 100%), linear-gradient(180deg, #01024E 0%, #01024E 43%, #543864 43%, #543864 62%, #8B4367 62%, #8B4367 80%, #FF6464 80%, #FF6464 100%);
     background-blend-mode: overlay, hard-light, overlay, normal;*/
     /*background: linear-gradient(120deg, #FF0000 0%, #2400FF 100%), linear-gradient(120deg, #FA00FF 0%, #208200 100%), linear-gradient(130deg, #00F0FF 0%, #000000 100%), radial-gradient(110% 140% at 15% 90%, #ffffff 0%, #1700A4 100%), radial-gradient(100% 100% at 50% 0%, #AD00FF 0%, #00FFE0 100%), radial-gradient(100% 100% at 50% 0%, #00FFE0 0%, #7300A9 80%), linear-gradient(30deg, #7ca304 0%, #2200AA 100%);
@@ -113,6 +113,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin: 3em 0;
 }
 
 
@@ -155,7 +156,7 @@ text-align: center;
     border-radius: 1em;
     padding: 0.4em;
     font-weight: 300;
-    margin: 0.5em 0;
+    margin-top: 1em;
 }
 
 
@@ -191,6 +192,8 @@ text-align: center;
     justify-content: center;
     padding: 0  3em;
     flex-wrap: wrap;
+    background: #111823fa;
+    backdrop-filter: blur(5px);
 }
 
 .ai > h2{
@@ -198,7 +201,7 @@ width: 100%;
 font-size: 4em;
 color: transparent;
 -webkit-text-stroke: 2px rgba(255, 255, 255, 0.678);
-margin: 0;
+margin: 0 0 1em 0;
 text-align: center;
 }
 
@@ -248,7 +251,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.562);
+    border-top: 1px solid rgba(128, 128, 128, 0.555);
     box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
     background: #00000794;
     backdrop-filter: blur(5px);
@@ -291,7 +294,7 @@ footer > div:last-child{
 
 .services_main{
     display: flex;
-    margin: 1em 0em;
+    margin: 4em;
     padding: 0;
     flex-wrap: wrap;
     
@@ -376,10 +379,11 @@ padding: 0.8em;
 .services_grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(10em ,2fr));
-    gap: 0.5em;
+    gap: 1em;
+    margin: 0 3em;
     padding: 1em;
     grid-template-areas: 
-        "ini ini . ."
+        "ini ini ini ini"
         "ai ai dw dw"
         "ai ai db db"
         "bd bd ds ds";
@@ -396,11 +400,21 @@ padding: 0.8em;
     border: 1px solid gray;
 }
 
-/*.services > svg{
-    position: absolute;
-    top: 1em;
-    right: 1em;
-}*/
+.services_grid > article > svg:first-of-type{
+    color:#FFC26E;
+}
+
+
+.services_grid > article > h2{
+    color:#25A6E9;
+}
+
+
+.services_grid > .services{
+    position: relative;
+ background: #10151d;
+ margin: 0;
+}
 
 .services_grid > article {
 border: 1px solid gray;
@@ -409,9 +423,11 @@ border: 1px solid gray;
 .services_grid > article:first-of-type {
     border: 0;
     grid-area: ini;
-    padding: 1em;
     border-radius: 0.3em;
     margin: 0.5em;
+    margin-left: 0;
+    padding: 0em 5em 2em 5em;
+    text-align: center;
 }
 
 
@@ -443,7 +459,10 @@ border: 1px solid gray;
     padding-bottom: 3em;
 }
 .ml1{
+    padding-top: 2em;
     margin-left: 1em;
+    font-size: 4em;
+    
 }
 
 
@@ -459,7 +478,7 @@ border: 1px solid gray;
     border-radius: 0.4em;
     flex-direction: column;
     border: 1px solid #17B877;
-    box-shadow: 1px 1px 15px #8662E3;
+    box-shadow: 1px 1px 35px #8662E3;
     margin-bottom: 4em;
    
     /*border: 1px solid rgba(255, 255, 255, 0.555);* /*border: 1px solid rgba(255, 255, 255, 0.555);*/
@@ -613,12 +632,8 @@ border: 1px solid gray;
         display: none;
      }
 
-     
-
-     
- 
      header ul > li:hover{
-         box-shadow:inset -1px -1px 3em 25A6E9; 
-     }
+        box-shadow:inset -1px -1px 3em 25A6E9; 
+    }
  
 }
