@@ -68,9 +68,9 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'core.wsgi.application'
-
+                                           ###IMPORTANTE##############################################
+WSGI_APPLICATION = 'demo.wsgi.application' # !!! en el servidor estaba 'core.wsgi.application' e iba bien, si falle volver a direigir a core
+                                           ###IMPORTANTE##############################################
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
         'default': {
                   'ENGINE': 'django.db.backends.mysql',
-                   'NAME': 'Toni_test',
-                   'USER': 'Toni_testdb',
-                   'PASSWORD': '5218TestDB8125',
+                   'NAME': 'toni_test',
+                   'USER': 'root',
+                   'PASSWORD': '5218TestDataBase8125@',
                    'HOST': 'localhost',
                    'PORT': '',
          }

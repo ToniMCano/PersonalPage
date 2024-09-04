@@ -12,7 +12,11 @@ urlpatterns = [
     path("services/" , views.services , name = "services"),
     path("portfolio/" , views.portfolio , name = "portfolio"),
     path("blog/" , views.blog , name = "blog"),
-    path("contacto/" , views.contact , name = "contacto")
+    path("contacto/" , views.contact , name = "contacto"),
+    path("analisis/" , views.analisis , name = "analisis"),
+    path("automation/" , views.automation , name = 'automation'),
+    path("software/" , views.software , name = 'software'),
+    path("web/" , views.web , name = "web"),
 ]
 
 if settings.DEBUG:
