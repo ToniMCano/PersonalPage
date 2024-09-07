@@ -49,25 +49,35 @@ header svg{
 
 header > ul{
     display: flex;
-    list-style: none;    
-    flex: 4;
-    height: 2em;    
+    justify-content: start;   
+    flex-wrap: nowrap;
+    flex: 4;  
     padding: 0.5em;
     border-radius: 0.3em;
     background:none;
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
+    border: 1px solid white;
     
 }
 
+header ul {
+    list-style: none; 
+    padding: 0.5em;
+    
+}
 
-header > ul > li{
+header li{
+    margin: 0 0.2em;
+}
+
+
+header > ul > li , header > ul > li > ul> li{
     display: flex;
     justify-content: center;
     align-items: center;
     flex:1;
-    margin: 0 0.2em;
     border-radius: 0.2em;
     padding: 0.3em;
     background:none;
@@ -79,12 +89,120 @@ header > ul > li:first-child{
 }  
 
 
-header > ul > li > a{
+header > ul > li > a , header > ul > li > ul> li a  {
     text-decoration: none;
-    color: white;
-    font-weight: 400;
-    background: none;
+    color:#66f7f2 ;
+    background: linear-gradient(#7E43C5 ,  #F778BA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-weight: 300;
+    font-size: 1.4em;
 } 
+
+header > ul > li:nth-child(4){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header > ul > li:nth-child(4) > ul {
+    height: 0;
+    overflow: hidden;
+}
+
+
+header > ul > li:nth-child(4):hover  > ul{
+    height: max-content;
+    visibility: visible;
+}
+
+header > ul > li:nth-child(4) > ul >li > ul {
+    height: 0;
+    display: none;
+}
+
+
+header > ul > li:nth-child(4) > ul >li:hover > ul {
+    height: max-content;
+    display: block;
+}
+
+
+
+header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
+    height: max-content;
+    margin: 0.5em;
+    padding: 0.5em;
+    background: #080a0e9c;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 1px #F778BA;
+    border-left: 5px solid #F778BA;
+    border-radius: 0.3em;
+}
+
+
+header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
+    font-size: 0.8em;
+    background: #89919B;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header > ul > li:nth-child(4) > ul > li > ul > a:hover > li{
+    font-size: 0.8em;
+    background: #66f7f2;
+    border-left: 5px solid #66f7f2;
+    box-shadow: 0px 0px 5px #F778BA;
+    margin-left: 0.7em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
+}
+
+
+header > ul > li > ul{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red;*/
+    position: absolute;
+    top: 2em;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    visibility: hidden;
+    padding: 2em 0.5em;
+}
+
+
+header > ul > li > ul > li{
+    display: flex;
+    width: 96%;
+    flex-direction: column;
+    /*border: 1px solid green;*/
+    justify-content: start;
+    align-items: start;
+    padding: 0.5em;
+    background: #080a0eda;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 1px #66f7f2;
+    border-left: 5px solid #66f7f2;
+}
+
+header > ul > li > ul > li:hover{
+    border-left: 5px solid #F778BA;
+    background: #080a0eda;
+
+}
+
+
+header > ul > li > a:hover{
+    text-shadow:  -8px -8px 1px #F778BA, 8px 8px 1px #66f7f2;
+} 
+
 
 
 header > img{
@@ -133,8 +251,32 @@ a{
 }
 
 .home >  p{
-    width: 60%;
+    width: 50%;
     margin: 3em 0;
+}
+
+
+
+.home a{
+    background: none;
+    text-decoration: none;
+    width: max-content;
+    /*color: #F778BA;*/
+    color: #F778BA;
+    border: 1px solid #F778BA;
+    border-radius: 0.8em;
+    padding: 0.4em 1em;
+    font-weight: 300;
+    box-shadow:  -4px -4px 7px #F778BA, 6px 6px 7px #7E43C5;
+}
+
+
+
+.home a:hover{
+    background:#7E43C5;
+    box-shadow:  -0px -0px 5px #F778BA, 0px 0px 0px #7E43C5;
+    border: 1px solid #66f7f2;
+    color: #66f7f2;
 }
 
 
@@ -149,12 +291,11 @@ a{
 
 
 .text_background , .ai > h2 > span{
-    background: -webkit-linear-gradient(190deg , hsl(313, 92%, 67%), #bf71f3 , #66f7f2);
+    background: linear-gradient(#7E43C5 ,  #F778BA );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #32AFAB;
     text-align: center;      
-}
+} 
 
 
 
@@ -179,6 +320,10 @@ article{
 
 }
 
+article p{
+    width: 70%;
+}
+
 
 #servicios article ul{
     flex-direction: column ;
@@ -195,26 +340,10 @@ article{
     box-shadow: 0px 0px 1px #66f7f2;
     padding: 0.5em;
     text-align: center;
-    border-left: 5px solid  #66f7f2c5;
+    border-left: 5px solid  #66f7f2;
     width: max-content;
     border-radius: 0.2em;
 }
-
-
-
-.home a{
-    background: none;
-    text-decoration: none;
-    width: max-content;
-    /*color: #F778BA;*/
-    color: #F778BA;
-    border: 1px solid #F778BA;
-    border-radius: 0.8em;
-    padding: 0.4em 1em;
-    font-weight: 300;
-    box-shadow:  -2px -2px 5px #F778BA, 4px 4px 3px #7E43C5;
-}
-
 
 
 .ai{
@@ -236,8 +365,8 @@ article{
     margin: 0;
     margin-bottom: 1.5em;
     padding: 0;
-    text-align: center;
-    font-size: 3em;
+    text-align: left;
+    font-size: 2.5em;
     height: 1.1em;
     color:white;
     font-weight: 300;
@@ -247,10 +376,17 @@ article{
 
 .ai > h2 > span{
     margin-left:0.2em;
-    font-weight: 500;
+    font-weight: 200;
     } 
 
+.ai > h2 {
+    font-size: 5em;
+    font-weight: 200;
+    color: white;
+    margin: 0.5em;
+    } 
     
+
 .ai_in {
     display: flex;
 }
@@ -262,15 +398,22 @@ article{
 
 
 .ai img{
- height: 12em;
- padding: 5em 10em;
+ position: absolute;
+ bottom:4em;
+ right:4em;
+ 
 }
+
+
+.ai img:first-of-type{
+    height: 12em;
+    padding: 2em 4em;
+   }
 
 
 .ai a:hover li {
     color: #F778BA;
     box-shadow: 0px 0px 5px #66f7f2;
-
 }
 
 
@@ -279,24 +422,54 @@ article{
     width: fit-content;
 }
 
+.services_head{
+
+    /*background: radial-gradient(ellipse at top, #66f7f2, transparent),
+            radial-gradient(ellipse at bottom, #7E43C5, transparent);*/
+            background: radial-gradient(#7E43C5 ,  #F778BA );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #32AFAB;
+}
 
 .final_p{
-    text-align: center;
-    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 700;
     color:white;
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;   ;
+    width: 73%;
+}
+
+hr {
+    margin-top: 3em;
+    width: 70%;
+    box-shadow: 0px 0px 3px #bf71f3;
+}
+
+.final_p p{
+    min-width:300px;
+    flex: 1;
+    text-align:left ;
+    margin: 1em;
+    box-shadow: 0px 0px 1px #bf71f3;
+    padding: 2em;
     text-shadow: 2px 2px 4px black;
     background: radial-gradient(ellipse at top, #7E43C5, transparent),
-            radial-gradient(ellipse at bottom, #F778BA, transparent);
-    margin: 2em;
+                 radial-gradient(ellipse at bottom, #F778BA, transparent);
+    border-radius: 0.5em;
 }
 
 footer{ 
-    padding: 0  0.5em   ;
+    padding: 0.6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(128, 128, 128, 0.555);
-    box-shadow: 1px 1px 2px rgba(31, 32, 32, 0.233);
+    
+    box-shadow: 0px 0px 3px #bf71f3;
     background: #00000794;
     backdrop-filter: blur(5px);
     margin-top: 1em;
@@ -321,10 +494,18 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #32AFAB;
+    background: radial-gradient(#7E43C5 ,  #F778BA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
 
+footer svg {
+
+    background: radial-gradient(#7E43C5 ,  #F778BA );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 footer a:last-of-type{
     color: #7E43C5;
