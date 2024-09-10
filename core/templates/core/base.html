@@ -38,24 +38,24 @@
             <li><a href="{% url 'about' %}">Sobre Mí</a></li>
             <li><a href="{% url 'services' %}">Servicios</a>
                 <ul>
-                    <li><a href="#">Desarrollo de Software</a>
+                    <li><a href="{%url 'software'%}">Desarrollo de Software</a>
                         <ul>
-                            <a href="#"><li>Sistemas de gestión empresarial</li></a>
-                            <a href="#"><li>Aplicaciones web interactivas</li></a>
+                            <a href="{%url 'analisis'%}"><li>Sistemas de gestión empresarial</li></a>
+                            <a href="{%url 'analisis'%}"><li>Aplicaciones web interactivas</li></a>
                         </ul>
                     </li>
-                    <li><a href="#">Soluciones de IA</a>
+                    <li><a href="{%url 'analisis'%}">Soluciones de IA</a>
                         <ul>
-                            <a href="#"><li>Chatbots y asistentes virtuales</li></a>
-                            <a href="#"><li>Análisis predictivo</li></a>
-                            <a href="#"><li>Automatización inteligente</li></a>
+                            <a href="{%url 'analisis'%}"><li>Chatbots y asistentes virtuales</li></a>
+                            <a href="{%url 'analisis'%}"><li>Análisis predictivo</li></a>
+                            <a href="{%url 'automation'%}"><li>Automatización inteligente</li></a>
                         </ul>
                     </li>
-                    <li><a href="#">Desarrollo Web</a>
+                    <li><a href="{%url 'web'%}">Desarrollo Web</a>
                         <ul>
-                            <a href="#"><li>Páginas web corporativas</li></a>
-                            <a href="#"><li>Plataformas de comercio electrónico</li></a>
-                            <a href="#"><li>Aplicaciones web interactivas</li></a>
+                            <a href="{%url 'analisis'%}"><li>Páginas web corporativas</li></a>
+                            <a href="{%url 'analisis'%}"><li>Plataformas de comercio electrónico</li></a>
+                            <a href="{%url 'analisis'%}"><li>Aplicaciones web interactivas</li></a>
                         </ul>
                     </li>
                 </ul>
@@ -64,7 +64,7 @@
             <li><a href="{% url 'blog' %}">Blog</a></li>
             <li><a href="{% url 'contacto' %}">Contacto</a></li>
         </ul>
-    </header>
+    </header> 
     <div class = "margin-top"></div>
     <main>
         

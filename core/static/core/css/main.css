@@ -57,16 +57,15 @@ header > ul{
     background:none;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0;
-    border: 1px solid white;
-    
+    margin: 0;    
 }
+
 
 header ul {
     list-style: none; 
     padding: 0.5em;
-    
 }
+
 
 header li{
     margin: 0 0.2em;
@@ -100,6 +99,7 @@ header > ul > li > a , header > ul > li > ul> li a  {
     font-size: 1.4em;
 } 
 
+
 header > ul > li:nth-child(4){
     position: relative;
     display: flex;
@@ -118,6 +118,7 @@ header > ul > li:nth-child(4):hover  > ul{
     visibility: visible;
 }
 
+
 header > ul > li:nth-child(4) > ul >li > ul {
     height: 0;
     display: none;
@@ -128,7 +129,6 @@ header > ul > li:nth-child(4) > ul >li:hover > ul {
     height: max-content;
     display: block;
 }
-
 
 
 header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
@@ -232,6 +232,9 @@ section{
    margin: 1em; 
 }
 
+section:last-of-type{
+    margin-bottom: 0;
+}
 
 a{
     text-decoration: none;
@@ -247,7 +250,8 @@ a{
     background-size: contain; 
     background-repeat: no-repeat;
     background-attachment:scroll ; 
-    background-position:right;     
+    background-position:right;  
+    height: auto;   
 }
 
 .home >  p{
@@ -299,12 +303,36 @@ a{
 
 
 
-#servicios{
+.servicios{
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
+
+
+.servicios  article ul{
+    flex-direction: column ;
+    margin-top: 2em;
+    display: flex;
+    list-style: none;
+}
+
+.servicios article ul li{
+    margin: 1em;
+    flex: 1;
+    background: #080a0e4d;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 1px #66f7f2;
+    padding: 0.5em;
+    text-align: center;
+    border-left: 5px solid  #66f7f2;
+    width: fit-content;
+    border-radius: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 article{
@@ -325,27 +353,118 @@ article p{
 }
 
 
-#servicios article ul{
-    flex-direction: column ;
-    margin-top: 2em;
+
+.head_h2{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+
+#beneficios  {
+    color: white;
+
+ }
+
+ 
+#beneficios strong {
+   color: #66f7f2;
+   font-weight: 600;
+   margin-right: 0.5em;
+}
+
+#beneficios li {
     display: flex;
-    list-style: none;
-}
+    justify-content: center;
+    align-items: center;
+ }
 
-#servicios article ul li{
-    margin: 1em;
+
+#beneficios li > div {
+    color: #bf71f3; 
+    font-size: 2em;
+    font-weight: 600;
+    margin-right: 0.5em;
+    position: absolute;
+    top: 8%;
+    left: -1.3em;
+    border-radius: 55%;
+    background: #0D1117;
+    border: 2px solid cyan;
+    height: 1.5em;
+    width: 1.5em;
+    
+ }
+
+
+#beneficios  ul{
+    list-style: circle;
     flex: 1;
-    background: #080a0e4d;
-    backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #66f7f2;
-    padding: 0.5em;
+    margin-top: 5em;
     text-align: center;
-    border-left: 5px solid  #66f7f2;
-    width: max-content;
     border-radius: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+    /*background: #080a0e4d;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 1px #66f7f2;*/
 }
 
 
+#beneficios ul > li{
+    padding: 1em;
+    margin: 1em;
+    border-left: 0;
+    background: none;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 2px #66f7f2;
+}
+
+#servicios{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+#servicios h2{
+    width: 90%;
+    text-align: center;
+}
+
+#servicios article{
+    display: flex;
+    max-width: 300px;
+    min-width: 500px;
+    padding: 2em;
+}
+
+#servicios article > div{
+    flex: 1;
+    min-height: 12em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0em;
+}
+
+
+#servicios article > div > h3{
+    min-width: 80%;
+    color: #bf71f3 ;
+    margin: 0.5em ;
+ }
+
+
+#servicios article > div  p{
+    width: 100%;
+ }
+
+.servicios strong {
+    
+ }
+ 
+
+
+ 
 .ai{
     display: flex;
     justify-content: right;
@@ -521,7 +640,32 @@ footer > div:last-child{
     justify-content: flex-end;
     }
 
+.main_dw{
+    background-image: url('/static/core/img/dw.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-attachment:scroll ; 
+    background-position-x: 92%;
+    background-position-y: 5%;
+    background-size:40% ;
+}
 
+
+#introduccion {
+   
+}
+
+.desarrollo_web{
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;    
+    }
+
+
+.desarrollo_web > p{
+    width: 70%;
+}
 
 .services > svg:first-of-type{
     position: absolute;
