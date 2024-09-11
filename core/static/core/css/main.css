@@ -90,7 +90,7 @@ header > ul > li:first-child{
 
 header > ul > li > a , header > ul > li > ul> li a  {
     text-decoration: none;
-    color:#66f7f2 ;
+    color:#32AFAB ;
     background: linear-gradient(#7E43C5 ,  #F778BA );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -152,8 +152,8 @@ header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
 
 header > ul > li:nth-child(4) > ul > li > ul > a:hover > li{
     font-size: 0.8em;
-    background: #66f7f2;
-    border-left: 5px solid #66f7f2;
+    background: #32AFAB;
+    border-left: 5px solid #32AFAB;
     box-shadow: 0px 0px 5px #F778BA;
     margin-left: 0.7em;
     -webkit-background-clip: text;
@@ -188,8 +188,8 @@ header > ul > li > ul > li{
     padding: 0.5em;
     background: #080a0eda;
     backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #66f7f2;
-    border-left: 5px solid #66f7f2;
+    box-shadow: 0px 0px 1px #32AFAB;
+    border-left: 5px solid #32AFAB;
 }
 
 header > ul > li > ul > li:hover{
@@ -200,7 +200,7 @@ header > ul > li > ul > li:hover{
 
 
 header > ul > li > a:hover{
-    text-shadow:  -8px -8px 1px #F778BA, 8px 8px 1px #66f7f2;
+    text-shadow:  -8px -8px 1px #F778BA, 8px 8px 1px #32AFAB;
 } 
 
 
@@ -220,11 +220,6 @@ header > article{
 main{
     display: flex;
     flex-direction: column;    
-}
-
-
-main > h1{
-    margin: 0;
 }
 
 
@@ -279,8 +274,8 @@ a{
 .home a:hover{
     background:#7E43C5;
     box-shadow:  -0px -0px 5px #F778BA, 0px 0px 0px #7E43C5;
-    border: 1px solid #66f7f2;
-    color: #66f7f2;
+    border: 1px solid #32AFAB;
+    color: #32AFAB;
 }
 
 
@@ -288,11 +283,19 @@ a{
     padding: 0;
     text-align: left;
     font-size: 3.5em;
-    height: 1.1em;
     color:white;
     font-weight: 300;
 }
 
+
+#introduccion p{
+    width: 58%;
+}
+
+#introduccion strong{
+    color: #32AFAB;
+    font-weight: 500;
+}
 
 .text_background , .ai > h2 > span{
     background: linear-gradient(#7E43C5 ,  #F778BA );
@@ -323,10 +326,10 @@ a{
     flex: 1;
     background: #080a0e4d;
     backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #66f7f2;
+    box-shadow: 0px 0px 1px #32AFAB;
     padding: 0.5em;
     text-align: center;
-    border-left: 5px solid  #66f7f2;
+    border-left: 5px solid  #32AFAB;
     width: fit-content;
     border-radius: 0.2em;
     display: flex;
@@ -341,7 +344,7 @@ article{
     margin: 1em;
     padding: 3em;
     border-radius: 0.5em;
-    /*border: 1px solid #66f7f2;*/
+    /*border: 1px solid #32AFAB;*/
     background: #080a0e4d;
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 1px #bf71f3;
@@ -367,7 +370,7 @@ article p{
 
  
 #beneficios strong {
-   color: #66f7f2;
+   color: #32AFAB;
    font-weight: 600;
    margin-right: 0.5em;
 }
@@ -389,7 +392,7 @@ article p{
     left: -1.3em;
     border-radius: 55%;
     background: #0D1117;
-    border: 2px solid cyan;
+    border: 2px solid #32AFAB;
     height: 1.5em;
     width: 1.5em;
     
@@ -406,7 +409,7 @@ article p{
     flex-wrap: wrap;
     /*background: #080a0e4d;
     backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #66f7f2;*/
+    box-shadow: 0px 0px 1px #32AFAB;*/
 }
 
 
@@ -416,7 +419,7 @@ article p{
     border-left: 0;
     background: none;
     backdrop-filter: blur(0px);
-    box-shadow: 0px 0px 2px #66f7f2;
+    box-shadow: 0px 0px 2px #32AFAB;
 }
 
 #servicios{
@@ -433,8 +436,8 @@ article p{
 
 #servicios article{
     display: flex;
-    max-width: 300px;
-    min-width: 500px;
+    min-width: 300px;
+    justify-content: center;
     padding: 2em;
 }
 
@@ -451,6 +454,9 @@ article p{
     min-width: 80%;
     color: #bf71f3 ;
     margin: 0.5em ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
 
@@ -532,7 +538,7 @@ article p{
 
 .ai a:hover li {
     color: #F778BA;
-    box-shadow: 0px 0px 5px #66f7f2;
+    box-shadow: 0px 0px 5px #32AFAB;
 }
 
 
@@ -543,7 +549,7 @@ article p{
 
 .services_head{
 
-    /*background: radial-gradient(ellipse at top, #66f7f2, transparent),
+    /*background: radial-gradient(ellipse at top, #32AFAB, transparent),
             radial-gradient(ellipse at bottom, #7E43C5, transparent);*/
             background: radial-gradient(#7E43C5 ,  #F778BA );
             -webkit-background-clip: text;
