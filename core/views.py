@@ -51,3 +51,7 @@ def software(request):
 def web(request):
     
     return render(request , "core/desarrollo-web-profesional.html" , {'title' : 'Desarrollo Web Profesional a Medida | Sitios Web Personalizados'})
+
+def chat(request):
+    
+    return render(request , "core/chatbots-y-asistentes-virtuales.html" , {'title' : 'Chatbots y Asistentes Virtuales: Transforma tu Negocio con IA'})

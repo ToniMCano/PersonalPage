@@ -17,6 +17,7 @@ urlpatterns = [
     path("automation/" , views.automation , name = 'automation'),
     path("software/" , views.software , name = 'software'),
     path("web/" , views.web , name = "web"),
+    path('chat/' , views.chat , name = "chat") 
 ]
 
 if settings.DEBUG:
