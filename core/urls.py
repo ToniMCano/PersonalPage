@@ -3,6 +3,7 @@ from django.urls import path , include
 
 from  . import views 
 from core import urls
+from web import urls
 from django.conf import settings
 
 
@@ -14,10 +15,8 @@ urlpatterns = [
     path("blog/" , views.blog , name = "blog"),
     path("contacto/" , views.contact , name = "contacto"),
     path("analisis/" , views.analisis , name = "analisis"),
-    path("automation/" , views.automation , name = 'automation'),
     path("software/" , views.software , name = 'software'),
-    path("web/" , views.web , name = "web"),
-    path('chat/' , views.chat , name = "chat") 
+    path('chat/' , views.chat , name = "chat"),  
 ]
 
 if settings.DEBUG:

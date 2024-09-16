@@ -1,3 +1,4 @@
+  
 """
 URL configuration for PersonalPage project.
 
@@ -16,9 +17,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("" , include("core.urls")),
-    path("web/" , include('web.urls')),
+     path("" ,  views.web , name = "web"),
 ]
+ 
+
+    

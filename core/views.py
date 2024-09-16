@@ -48,9 +48,6 @@ def software(request):
     return render(request , "core/desarrollo-de-software.html" , {'title': 'Desarrollo de Software a Medida | Soluciones Personalizadas para tu Empresa'})
 
 
-def web(request):
-    
-    return render(request , "core/desarrollo-web-profesional.html" , {'title' : 'Desarrollo Web Profesional a Medida | Sitios Web Personalizados'})
 
 def chat(request):
     
