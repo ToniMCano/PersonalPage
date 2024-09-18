@@ -86,10 +86,13 @@ header > ul > li > a , header > ul > li > ul> li a  {
     background: linear-gradient(#763FC7 ,  #EA4AAA );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600;
     font-weight: 300;
     font-size: 1.4em;
 } 
+
+header > ul > li > ul> li a{
+    font-size: 1.2em;
+}
 
 
 header > ul > li:nth-child(4){
@@ -136,14 +139,13 @@ header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
 
 
 header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
-    font-size: 0.8em;
+    font-size: 0.9em;
     background: #89919B;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 header > ul > li:nth-child(4) > ul > li > ul > a:hover > li{
-    font-size: 0.8em;
     background: #33B3AE;
     border-left: 5px solid #33B3AE;
     box-shadow: 0px 0px 5px #EA4AAA;
@@ -360,19 +362,41 @@ a{
     flex-wrap: wrap;
 }
 
+#componentes > article > ul{
+    padding: 0;
+}
+
+#componentes > article > ul > li{
+align-items: center;
+width: 100%;
+flex: 1;
+padding: 1em;
+box-sizing: border-box;
+}
 
 
-article{
+#componentes > article > ul > li > p{
+   display: block;
+   width: auto;
+   margin: 0 ;
+}
+
+
+#componentes > article > ul > li > p > span{
+    font-weight: bold;
+    color: #33B3AE;
+}
+
+article , #como-funciona > article{
     width: 65%;
     flex: 1;
     margin: 1em;
     padding: 3em;
     border-radius: 0.5em;
-    /*border: 1px solid #33B3AE;*/
     background: #080a0e4d;
     backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #EA4AAA;
-
+    box-shadow: 0px 0px 1px black;
+    /*box-shadow: 1px 1px 2px #763FC7 , -1px -1px 2px #EA4AAA;*/
 }
 
 article p{
@@ -480,19 +504,17 @@ article p{
  
  }
  
- #soluciones-que-ofrecemos{
+ #soluciones-que-ofrecemos , #tipos-software{
     margin: 0;
-       
-
  }
 
 
- #soluciones-que-ofrecemos article{
+ #soluciones-que-ofrecemos article , #tipos-software article{
    padding: 0.5em 1em;
 }
 
 
-#soluciones-que-ofrecemos h3{
+#soluciones-que-ofrecemos h3 , #tipos-software h3{
     display: flex;
     font-weight: 300;
     font-size: 1.5em;
@@ -503,7 +525,18 @@ article p{
 }
 
 
-#soluciones-que-ofrecemos span{
+#tipos-software > article{
+    box-shadow: 0px 0px 3px #33B3AE;
+    
+}
+
+
+#tipos-software p{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#soluciones-que-ofrecemos span , #tipos-software span{
     border-radius: 0.3em;
     padding: 0  0.3em;
     font-weight: 300;
@@ -514,6 +547,9 @@ article p{
 }
 
 
+#tipos-software h3{
+    color: #EA4AAA;
+}
 
 #compromiso, #nuestro-compromiso , #contacto , #por-que-elegirnos{
     padding: 2em;
@@ -895,13 +931,11 @@ border: 1px solid gray;
 #nuestro-compromiso h2 , #por-que-elegirnos h2 , #nuestro-compromiso h2 , #compromiso h2{
     color: #EA4AAA;
     font-weight: 500;
-    font-size: 2em;
+ 
 }
 
-#nuestro-compromiso > article , #por-que-elegirnos > article , #compromiso > article{
-    max-width: 70%;
+#nuestro-compromiso > article , #por-que-elegirnos > article , #compromiso > article{   
     padding: 4em;
-    box-sizing: border-box;
     border-radius: 2em;
     border: 1px solid #33B3AE;
 }
@@ -916,6 +950,7 @@ border: 1px solid gray;
     box-shadow: 0px 0px 0px red;
     border-left: 0px;
     color: #0D1117;
+    border-radius: 0.3  em;
 }
 
 #nuestro-compromiso > article ul > li > strong , #por-que-elegirnos > article ul > li > h4{ 
@@ -926,6 +961,10 @@ border: 1px solid gray;
     padding: 0.3em;
 }
 
+#por-que-elegirnos > article ul > li {
+    padding: 0;
+    padding-right: 1em;
+}
 
 #nuestro-compromiso > article ul > li > strong{
     color: #0D1117;
@@ -935,11 +974,12 @@ border: 1px solid gray;
 #por-que-elegirnos > article ul > li > h4{
     font-size: 1em;
     width: fit-content;
-    
-    margin: 0.5em;
+    margin: 0em;
+    margin-right: 1em;
     color: #0D1117;
 
 }
+
 
 
 #por-que-elegirnos  > article ul{
@@ -951,7 +991,7 @@ border: 1px solid gray;
 #por-que-elegirnos  > article ul > li{
     margin:1em 0;
     color: #33B3AE;
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -983,10 +1023,10 @@ border: 1px solid gray;
     box-shadow: 0px 0px 0px #33B3AE;  
     color: white;
     border-left: 0;
-    font-size: 1.3em;
-    box-shadow: 0px 0px 3px #EA4AAA;
+  
     padding: 0;
     padding-right: 0.4em;
+    border-radius: 0.2em;
 }
 
 .union article > ul > li > h3{
@@ -996,9 +1036,120 @@ border: 1px solid gray;
     border-radius: 0.2em;
     font-weight: 500;
     margin: 0;
-    margin-right: 0.3em;
+    margin-right: 0.5em;
+    font-size: 1em;
 }
 
+#soluciones-software , #como-funciona{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#soluciones-software p , #como-funciona p{
+    width: 100%;
+}
+
+
+#como-funciona div{
+    background: black;
+}
+
+#como-funciona > article{
+   
+}
+
+.flow{
+    background: none;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 0px red;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+
+
+.flow > div{
+    border: 1px solid #33B3AE;
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 1em;
+    min-width: 300px;
+   flex: 1;
+   position: relative;
+}
+
+
+.flow > h2{
+   width: 100%;
+   text-align: center;
+   margin-bottom: 2em;
+}
+
+.flow  h3{
+    color: #EA4AAA;
+    font-weight: 400;
+ }
+
+
+ .flow span{
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.3em ;
+    font-size: 1.5em;
+    /*text-shadow: 1px 1px 1px black;*/
+    font-weight: bold;
+    top: -1em;
+    left: -1.8em;
+    color:white;
+    z-index: 23;
+    
+    /*box-shadow:  3px -3px 6px #EA4AAA;*/
+ }
+
+ #como-funciona .flow > div{
+    border: 1px solid #7e43c5
+ }
+
+ #como-funciona .flow > div h3{
+    color: #33B3AE;
+}
+
+
+ .flow span::before , .flow span::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.3em ;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1.5em solid #33b3afa1; /* Color del triángulo */
+    transform: rotate(90deg);
+    z-index: -1;
+ }
+
+ #como-funciona .flow span::before , #como-funciona .flow span::after{
+    border-bottom: 1.5em solid #ea4aaad2; /* Color del triángulo */
+ }
+
+ #como-funciona .flow span::before ,  #como-funciona .flow span::after{
+    border-bottom: 1.5em solid #ea4aaaf3; /* Color del triángulo */
+ }
+
+ .flow span::after{
+    border-bottom: 1.5em solid #33b3af8c;
+    right: -0.7em;
+ }
 
 
 
@@ -1026,7 +1177,11 @@ border: 1px solid gray;
             "bd bd"
             "ds ds";
     }
-/*.union article > ul {
+}
+
+@media (width < 1508px){
+
+    .union article > ul {
         padding: 0;
     }
 
@@ -1051,67 +1206,99 @@ border: 1px solid gray;
     width: auto;
     padding-right: 0;
     margin: 1em;
-}*/
-
-
-
-header ul{
-    height: 100vh;
-    z-index: 1;
-    margin: 0;
-    position: absolute;
-    right: 1em;
-    background: none;
-    height: 3em;
-        max-width: 3em;
-        z-index: 1;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        position: fixed;
-        background: none;
-        top: 4em;
 }
 
-header ul > li{
-    background: none;  
-}
-
-/*-------------*/
-header svg{
-    display: block;
-    background: -webkit-radial-gradient(#33B3AE, #763FC7);
-    border-radius: 100%;
+    .home > article:nth-child(5) , .home > article:first-of-type{
+    
+            
     }
 
-    
-    header ul:hover{
-        height: 100vh;
-        min-width: 50vw;
-        z-index: 1;
-        margin: 0;
-        box-shadow: -1px -1px 2px rgba(142, 143, 143, 0.158);
-        padding: 0;
-        right:  0;
+    .home , .services_main{
+        margin: 2em;
+        flex-wrap: wrap;
+    }
+
+    .services_main > article {
+            min-width: 40%;
+    }
+
+    .nb, .nb p{
         width: 100%;
+        flex-direction: column;
+    }
+
+    .nb p{
+       min-width: 100%;
+       display: block;
+    }
+
+    .home > article:first-of-type {
+        width: 100%;
+        box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
         background: #00000794;
         backdrop-filter: blur(5px);
-        top:-1em;
-
+        margin: 1em 0;
+        border-radius: 0.5em;
     }
 
-    header ul:hover > li{
-    min-width: 100%;
-    flex: 1;
-    box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
+
+    header ul{
+        height: 100vh;
+        z-index: 1;
+        margin: 0;
+        position: absolute;
+        right: 1em;
+        background: none;
+        height: 3em;
+         max-width: 3em;
+         z-index: 1;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         position: fixed;
+         background: none;
+         top: 4em;
     }
 
-    header ul:hover > li:first-child{
-    display: none;
+    header ul > li{
+      background: none;  
     }
+    
+    /*-------------*/
+    header svg{
+        display: block;
+        background: -webkit-radial-gradient(#33B3AE, #763FC7);
+        border-radius: 100%;
+     }
+ 
+     
+     header ul:hover{
+         height: 100vh;
+         min-width: 50vw;
+         z-index: 1;
+         margin: 0;
+         box-shadow: -1px -1px 2px rgba(142, 143, 143, 0.158);
+         padding: 0;
+         right:  0;
+         width: 100%;
+         background: #00000794;
+         backdrop-filter: blur(5px);
+         top:-1em;
 
-    header ul > li:hover{
-    box-shadow:inset -1px -1px 3em #33B3AE; 
-}
+     }
+ 
+     header ul:hover > li{
+        min-width: 100%;
+        flex: 1;
+        box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
+     }
+  
+     header ul:hover > li:first-child{
+        display: none;
+     }
 
+     header ul > li:hover{
+        box-shadow:inset -1px -1px 3em #33B3AE; 
+    }
+ 
 }

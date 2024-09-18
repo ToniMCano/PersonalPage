@@ -3,9 +3,8 @@ from django.urls import path , include
 
 from  . import views 
 from core import urls
-from web import urls
 from django.conf import settings
-
+from web import urls
 
 urlpatterns = [
     path("" , views.home , name = "home"),
@@ -15,8 +14,9 @@ urlpatterns = [
     path("blog/" , views.blog , name = "blog"),
     path("contacto/" , views.contact , name = "contacto"),
     path("analisis/" , views.analisis , name = "analisis"),
-    path("software/" , views.software , name = 'software'),
+    path("software/" , include("software.urls")),
     path('chat/' , views.chat , name = "chat"),  
+    path('web/' , include('web.urls')),
 ]
 
 if settings.DEBUG:

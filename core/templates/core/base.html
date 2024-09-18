@@ -30,31 +30,34 @@
 <body>
     <header>
         <img src= "{% static 'core/img/logo.png' %}" alt="">
-        <ul class = "nbm">
+        <ul class = "">
             <li class = "nbm">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>        
             </li>
             <li><a href="{% url 'home' %}">Inicio</a></li>
-            <li><a href="{% url 'about' %}">Sobre Mí</a></li>
+            <li><a href="{% url 'about' %}">Nosotros</a></li>
             <li><a href="{% url 'services' %}">Servicios</a>
                 <ul>
-                    <li><a href="{%url 'software'%}">Desarrollo de Software</a>
+                    <li><a href="{% url 'software'%}">Desarrollo de Software</a>
                         <ul>
-                            <a href="{%url 'analisis'%}"><li>Sistemas de gestión empresarial</li></a>
-                            <a href="{%url 'analisis'%}"><li>Aplicaciones web interactivas</li></a>
+                            <a href="{% url 'empresarial'%}"><li>Sistemas de gestión empresarial</li></a>
+                            <a href= '#'><li>Aplicaciones web interactivas</li></a>
                         </ul>
                     </li>
-                    <li><a href="{%url 'analisis'%}">Soluciones de IA</a>
+                    <li><a href="{% url 'analisis'%}">Soluciones de IA</a>
                         <ul>
-                            <a href="{%url 'chat'%}"><li>Chatbots y asistentes virtuales</li></a>
-                            <a href="{%url 'analisis'%}"><li>Análisis predictivo</li></a>
+                            <a href="{% url 'chat'%}"><li>Chatbots y asistentes virtuales</li></a>
+                            <a href="{% url 'analisis'%}"><li>Análisis predictivo</li></a>
                         </ul>
                     </li>
-                    <li><a href="{%url 'web'%}">Desarrollo Web</a>
+                    <li><a href="{% url 'web'%}">Desarrollo Web</a>
                         <ul>
-                            <a href="{%url 'analisis'%}"><li>Páginas web corporativas</li></a>
-                            <a href="{%url 'analisis'%}"><li>Plataformas de comercio electrónico</li></a>
-                            <a href="{%url 'analisis'%}"><li>Aplicaciones web interactivas</li></a>
+                            <a href="{% url 'corporativas'%}"><li>Páginas web corporativas</li></a>
+                            <a href="{% url 'tiendas'%}"><li>Plataformas de comercio electrónico</li></a>
+                            <a href="#"><li>Aplicaciones web personalizadas</li></a>
+                            <a href="{% url 'landings'%}"><li>Landing Pages</li></a>
+                            <a href="{% url 'portfolios'%}"><li>Portfolios y Webs Personales</li></a>
+                            <a href="{% url 'educativas'%}"><li>Plataformas Educativas</li></a>
                         </ul>
                     </li>
                 </ul>
