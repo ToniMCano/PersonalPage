@@ -284,11 +284,6 @@ a{
     background: rebeccapurple;
 }
 
-.contacto span > a{
-    margin-left: 2em;
-
-}
-
 
 
 .home a:hover , .contacto a:hover{
@@ -571,23 +566,35 @@ article p{
     }
 
 .contacto > div{
-    flex: 3;
     padding: 0 2em;
-    width: 100% ;
+    min-width: 70% ;
     box-sizing: border-box;
     font-size: 1.5em;
+    flex: 3;
     }
 
-    .contacto > div:last-of-type{
-        text-align: right;
-        flex: 1;
-        }
+.contacto > div:last-of-type{
+    flex: 1;
+    min-width: 300px;
+    padding: 0;
+
+    }
+
+.contacto > div:last-of-type > p{
+    text-align: center;
+    }
 
 
 .contacto > div > p >span > a{
-    font-size: 0.8em;
     background: black;
-    min-width: 300px;
+}
+
+.contacto > div > p >span > a , .contacto > div > p >span{
+    font-size: 0.8em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #servicios , .software_b , .id_servicios{
     display: flex;
