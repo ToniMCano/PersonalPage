@@ -269,7 +269,7 @@ a{
 
 
 
-.home a , #contacto span > a{
+.home a , .contacto span > a{
     background: none;
     text-decoration: none;
     width: max-content;
@@ -284,14 +284,14 @@ a{
     background: rebeccapurple;
 }
 
-#contacto span > a{
+.contacto span > a{
     margin-left: 2em;
 
 }
 
 
 
-.home a:hover , #contacto a:hover{
+.home a:hover , .contacto a:hover{
     background:#763FC7;
     box-shadow:  -0px -0px 5px #EA4AAA, 0px 0px 0px #763FC7;
     border: 1px solid #33B3AE;
@@ -328,6 +328,8 @@ a{
 .servicios strong{
     color: #33B3AE;
     margin-right: 0.5em;
+    font-size: 1.3em;
+    font-weight: 300;
 }
 
 
@@ -394,8 +396,8 @@ article , #como-funciona > article{
     margin: 1em;
     padding: 3em;
     border-radius: 0.5em;
-    background: #080a0e4d;
-    backdrop-filter: blur(15px);
+    background: #080a0e71;
+    backdrop-filter: blur(5px);
     box-shadow: 0px 0px 1px black;
     /*box-shadow: 1px 1px 2px #763FC7 , -1px -1px 2px #EA4AAA;*/
 }
@@ -420,7 +422,7 @@ article p{
  
 #beneficios h3 {
    color: #33B3AE;
-   font-weight: 600;
+   font-weight: 400;
   
 }
 
@@ -432,8 +434,8 @@ article p{
 
 #beneficios li {
     display: flex;
-    justify-content: center;
     align-items: center;
+
  }
 
 
@@ -468,13 +470,7 @@ article p{
 }
 
 
-#beneficios ul > li{
-    padding: 1em;
-    border-left: 0;
-    background: none;
-    backdrop-filter: blur(0px);
-    box-shadow: 0px 0px 2px #33B3AE;
-}
+
 
 
 .beneficios{
@@ -499,10 +495,9 @@ article p{
  .beneficios li p{
     text-align: left;
     width: 100%;
-    text-align: center;
     margin: 0;
     margin-top: 0.5em;
- 
+    color: #89919B;
  }
  
  #soluciones-que-ofrecemos , #tipos-software{
@@ -552,7 +547,7 @@ article p{
     color: #EA4AAA;
 }
 
-#compromiso, #nuestro-compromiso , #contacto , #por-que-elegirnos{
+#compromiso, #nuestro-compromiso , .contacto , #por-que-elegirnos{
     padding: 2em;
     box-sizing: border-box;
     color: white;
@@ -563,25 +558,38 @@ article p{
     color: #33B3AE;
 }
 
-#contacto{
+.contacto{
     margin:0;    
     padding: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    }
-
-#contacto > div{
-    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     background: radial-gradient(ellipse at top, #7e43c5ad, transparent),
     radial-gradient(ellipse at bottom, #f778ba98, transparent);
+    }
+
+.contacto > div{
+    flex: 3;
     padding: 0 2em;
     width: 100% ;
     box-sizing: border-box;
+    font-size: 1.5em;
     }
 
-#servicios , .software_b{
+    .contacto > div:last-of-type{
+        text-align: right;
+        flex: 1;
+        }
+
+
+.contacto > div > p >span > a{
+    font-size: 0.8em;
+    background: black;
+    min-width: 300px;
+}
+#servicios , .software_b , .id_servicios{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -590,7 +598,7 @@ article p{
     
 }
 
-#servicios h2 , .software_b h2{
+#servicios h2 , .software_b h2 , .id_servicios h2{
     width: 90%;
     text-align: center;
     margin-top: 2em;
@@ -598,14 +606,14 @@ article p{
     font-size: 3em;
 }
 
-#servicios article{
+#servicios article , .id_servicios article{
     display: flex;
     min-width: 300px;
     justify-content: center;
     padding: 2em;
 }
 
-#servicios article > div{
+#servicios article > div , .id_servicios article > div{
     flex: 1;
     min-height: 12em;
     display: flex;
@@ -614,17 +622,24 @@ article p{
 }
 
 
-#servicios article > div > h3{
-  
+#servicios article > div > h3 , .id_servicios article > div > h3{
     color: #33B3AE ;
     margin: 0.5em ;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
  }
 
 
-#servicios article > div  p{
+ .id_servicios article > div > h3{
+    color: #33B3AE;
+    font-weight: 300;
+    font-size: 1.4em;
+    margin: 0;
+ }
+
+#servicios article > div  p , .id_servicios article > div  p{
     width: 100%;
  }
 
@@ -720,11 +735,18 @@ article p{
 }
 
 
-.main_services a{
+.main_services > article > div > div > ul > a > li{
     color: #89919B;
     width: fit-content;
+    border: 1px solid #EA4AAA;
+    color: white;
+    border-radius: 3em;
+    padding: 0.5em 1em;
 }
 
+#brds{
+    border-radius: 3em;
+}
 .services_head{
 
     /*background: radial-gradient(ellipse at top, #33B3AE, transparent),
@@ -946,7 +968,7 @@ border: 1px solid gray;
 
 #nuestro-compromiso > article , #por-que-elegirnos > article , #compromiso > article{   
     padding: 4em;
-    border-radius: 2em;
+    border-radius: 1em;
     border: 1px solid #33B3AE;
 }
 
@@ -959,13 +981,28 @@ border: 1px solid gray;
 #nuestro-compromiso > article ul > li , #por-que-elegirnos  > article ul > li{
     box-shadow: 0px 0px 0px red;
     border-left: 0px;
-    color: #0D1117;
+    color: #89919B;
     border-radius: 0.3em;
 }
+/*
+.services_sep  > article > ul > li{
+    display: flex;
+    
+}
+.services_sep  > article > ul > li > h3{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #763FC7;
+}
 
+.services_sep  > article > ul > li > p{
+   flex: 3;
+}
 
+*/
 #nuestro-compromiso > article ul > li  , #por-que-elegirnos > article ul > li > h4{ 
-    font-size: 1.3em;
+    font-size: 1em;
     background:#7e43c5;
     border-radius: 0.3em;
     padding: 0.3em;
@@ -987,12 +1024,12 @@ border: 1px solid gray;
 
 
 #por-que-elegirnos > article ul > li > h4{
-    font-size: 1em;
+    font-size: 1.2em;
     width: fit-content;
     margin: 0em;
     margin-right: 1em;
     color: #0D1117;
-
+    
 }
 
 
@@ -1005,13 +1042,17 @@ border: 1px solid gray;
 
 #por-que-elegirnos  > article ul > li{
     margin:1em 0;
-    color: #33B3AE;
-    font-size: 1.2em;
+    font-size: 1em;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-   
+    padding: 1em;
 }
+
+#por-que-elegirnos  > article ul > li > p{
+    color: #33B3AE;
+}
+
 
 #chatbots{
     display: flex;
@@ -1094,6 +1135,11 @@ border: 1px solid gray;
     min-width: 300px;
    flex: 1;
    position: relative;
+}
+
+.ffour > div , .ffour > article{
+    min-width: 40%;
+    
 }
 
 
@@ -1242,32 +1288,7 @@ border: 1px solid gray;
 
 @media (width < 1508px){
 
-    .union article > ul {
-        padding: 0;
-    }
 
-
-.union article > ul > li{
-    width: auto;
-    padding-right: 0;
-}
-
-
-
-.union article > ul > li > h3{
-    margin-right: 0;
-    width: 100%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    text-align: center;
-}
-
-
-.union article > ul > li > p{
-    width: auto;
-    padding-right: 0;
-    margin: 1em;
-}
 
     .home > article:nth-child(5) , .home > article:first-of-type{
     
@@ -1305,4 +1326,34 @@ border: 1px solid gray;
 
     
  
+}
+
+@media (width < 1200px){
+
+    .union article > ul {
+        padding: 0;
+    }
+
+
+.union article > ul > li{
+    width: auto;
+    padding-right: 0;
+}
+
+
+
+.union article > ul > li > h3{
+    margin-right: 0;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+}
+
+
+.union article > ul > li > p{
+    width: auto;
+    padding-right: 0;
+    margin: 1em;
+}
 }

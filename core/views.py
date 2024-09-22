@@ -33,16 +33,3 @@ def contact(request):
     return render(request , "core/contacto.html" , {'title' : 'Contacto'})
 
 
-def analisis(request):
-    
-    return render(request , "core/analisis-predictivo.html" , {'title': 'Análisis Predictivo: Descubre el Futuro de tus Datos'})
-
-
-def automation(request):
-    
-    return render(request , "core/automatizacion-inteligente.html" , {'title': 'Automatización Inteligente: La Clave para Transformar Tu Negocio'})
-
-
-def chat(request):
-    
-    return render(request , "core/chatbots-y-asistentes-virtuales.html" , {'title' : 'Chatbots y Asistentes Virtuales: Transforma tu Negocio con IA'})

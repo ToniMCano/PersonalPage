@@ -12,7 +12,7 @@
         <div class = "main_text">Tranasformando Ideas </div>
         <div class = "main_text">    en <span class = "text_background">Soluciones Digitales</span> </div>
         <p>Su socio de confianza en soluciones digitales avanzadas. Nos especializamos en el desarrollo de software a medida, aplicaciones web de alta calidad e inteligencia artificial aplicada. Transformamos sus ideas en realidades tecnológicas que impulsan su negocio hacia el éxito.</p>
-        <a href="#servicios" >Contacta Ahora</a>
+        <a href="#servicios" target = "_blank" >Contacta Ahora</a>
     </section>
     
     <section id="soluciones" class = "main_services , servicios">
@@ -23,9 +23,9 @@
             <div class = "ai_in">
                 <div>
                     <ul>
-                        <a href = "#"><li>Chatbots y asistentes virtuales</li></a>
-                        <a href = "#"><li>Análisis predictivo</li></a>
-                        <a href = "#"><li>Automatización inteligente</li></a>
+                        <a href = "#" target = "_blank"><li id = 'bdrs'>Chatbots y asistentes virtuales</li></a>
+                        <a href = "#" target = "_blank"><li>Análisis predictivo</li></a>
+                        <a href = "#" target = "_blank"><li>Automatización inteligente</li></a>
                     </ul>
                 </div>
                 
@@ -38,10 +38,13 @@
             <div class = "ai_in">
                 <div>
                     <ul>
-                        <a href = "#"><li>Páginas web corporativas</li></a>
-                        <a href = "#"><li>Plataformas de comercio electrónico</li></a>
-                        <a href = "#"><li>Aplicaciones web interactivas</li></a>
-                    </ul>
+                        <a href="{% url 'corporativas'%}" target = "_blank"><li>Páginas web corporativas</li></a>
+                        <a href="{% url 'tiendas'%}" target = "_blank"><li>Plataformas de comercio electrónico</li></a>
+                        <a href="#"><li>Aplicaciones web personalizadas</li></a>
+                        <a href="{% url 'landings'%}" target = "_blank"><li>Landing Pages</li></a>
+                        <a href="{% url 'portfolios'%}" target = "_blank"><li>Portfolios y Webs Personales</li></a>
+                        <a href="{% url 'educativas'%}" target = "_blank"><li>Plataformas Educativas</li></a>
+                    </ul>   
                 </div>
                 <img src="{% static 'core/img/dw.png' %}" alt="">
             </div>
@@ -52,8 +55,8 @@
             <div class = "ai_in">
                 <div>
                     <ul>
-                        <a href = "#"><li>Sistemas de gestión empresarial</li></a>
-                        <a href = "#"><li>Integraciones y automatización</li></a>
+                        <a href = "#" target = "_blank"><li>Sistemas de gestión empresarial</li></a>
+                        <a href = "#" target = "_blank"><li>Integraciones y automatización</li></a>
                     </ul>
                 </div>
                 <img src="{% static 'core/img/sw.png' %}" alt="">

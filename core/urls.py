@@ -13,10 +13,9 @@ urlpatterns = [
     path("portfolio/" , views.portfolio , name = "portfolio"),
     path("blog/" , views.blog , name = "blog"),
     path("contacto/" , views.contact , name = "contacto"),
-    path("analisis/" , views.analisis , name = "analisis"),
-    path("software/" , include("software.urls")),
-    path('chat/' , views.chat , name = "chat"),  
+    path("software/" , include("software.urls")), 
     path('web/' , include('web.urls')),
+    path("ia/" , include("ia.urls")),
 ]
 
 if settings.DEBUG:
