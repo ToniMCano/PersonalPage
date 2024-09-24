@@ -8,7 +8,7 @@
     
 {% block content %}
 {% load static %}
-    <section id="presentacion" class = "home">
+    <section id="presentacion" class = "introduccion">
         <div class = "main_text">Tranasformando Ideas </div>
         <div class = "main_text">    en <span class = "text_background">Soluciones Digitales</span> </div>
         <p>Su socio de confianza en soluciones digitales avanzadas. Nos especializamos en el desarrollo de software a medida, aplicaciones web de alta calidad e inteligencia artificial aplicada. Transformamos sus ideas en realidades tecnológicas que impulsan su negocio hacia el éxito.</p>
@@ -19,23 +19,25 @@
         <h2>Nuestros <span class = "text_background">Servicios</span></h2>
         <article>
             <h3 class = "services_head">Soluciones de IA</h3>
-            <p>Potencie su negocio con soluciones de inteligencia artificial y machine learning. Diseñamos y desarrollamos aplicaciones que transforman grandes volúmenes de datos en decisiones estratégicas, optimizando procesos y mejorando la experiencia del usuario. Desde chatbots hasta sistemas de recomendación, llevamos la innovación a cada aspecto de su empresa.</p>
+            <div class = main_image><img src="{% static 'core/img/ia.png' %}" alt=""></div>
             <div class = "ai_in">
+                <p>Potencie su negocio con soluciones de inteligencia artificial y machine learning. Diseñamos y desarrollamos aplicaciones que transforman grandes volúmenes de datos en decisiones estratégicas, optimizando procesos y mejorando la experiencia del usuario. Desde chatbots hasta sistemas de recomendación, llevamos la innovación a cada aspecto de su empresa.</p>
                 <div>
                     <ul>
-                        <a href = "#" target = "_blank"><li id = 'bdrs'>Chatbots y asistentes virtuales</li></a>
+                        <a href = "#" target = "_blank"><li>Chatbots y asistentes virtuales</li></a>
                         <a href = "#" target = "_blank"><li>Análisis predictivo</li></a>
                         <a href = "#" target = "_blank"><li>Automatización inteligente</li></a>
                     </ul>
                 </div>
                 
             </div>
-            <img src="{% static 'core/img/ia.png' %}" alt="">  <!-- -->
+           
         </article>
         <article>
             <h3 class = "services_head">Desarrollo Web</h3>
-            <p>Ofrecemos soluciones de desarrollo web personalizadas, desde páginas web corporativas hasta plataformas de comercio electrónico y aplicaciones web interactivas. Nuestro equipo de expertos utiliza las últimas tecnologías para crear sitios web seguros, escalables y fáciles de gestionar, adaptados a las necesidades específicas de su empresa.</p>
+            <div class = main_image><img src="{% static 'core/img/dw.png' %}" alt=""></div>
             <div class = "ai_in">
+                <p>Ofrecemos soluciones de desarrollo web personalizadas, desde páginas web corporativas hasta plataformas de comercio electrónico y aplicaciones web interactivas. Nuestro equipo de expertos utiliza las últimas tecnologías para crear sitios web seguros, escalables y fáciles de gestionar, adaptados a las necesidades específicas de su empresa.</p>
                 <div>
                     <ul>
                         <a href="{% url 'corporativas'%}" target = "_blank"><li>Páginas web corporativas</li></a>
@@ -45,21 +47,20 @@
                         <a href="{% url 'portfolios'%}" target = "_blank"><li>Portfolios y Webs Personales</li></a>
                         <a href="{% url 'educativas'%}" target = "_blank"><li>Plataformas Educativas</li></a>
                     </ul>   
-                </div>
-                <img src="{% static 'core/img/dw.png' %}" alt="">
+                </div> 
             </div>
         </article>
         <article>
             <h3 class = "services_head">Desarrollo de Software</h3>
-            <p>Desarrollamos software a medida que se adapta perfectamente a los procesos y objetivos de su negocio. Desde sistemas de gestión empresarial hasta soluciones móviles, nuestra experiencia nos permite entregar productos robustos y eficientes, diseñados para optimizar el rendimiento y la productividad de su empresa.</p>
+            <div class = main_image><img src="{% static 'core/img/sw.png' %}" alt=""></div>
             <div class = "ai_in">
+                <p>Desarrollamos software a medida que se adapta perfectamente a los procesos y objetivos de su negocio. Desde sistemas de gestión empresarial hasta soluciones móviles, nuestra experiencia nos permite entregar productos robustos y eficientes, diseñados para optimizar el rendimiento y la productividad de su empresa.</p>
                 <div>
                     <ul>
                         <a href = "#" target = "_blank"><li>Sistemas de gestión empresarial</li></a>
                         <a href = "#" target = "_blank"><li>Integraciones y automatización</li></a>
                     </ul>
                 </div>
-                <img src="{% static 'core/img/sw.png' %}" alt="">
             </div>
         </article>
         <div class = "line"></div>
