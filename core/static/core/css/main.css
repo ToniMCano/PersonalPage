@@ -10,7 +10,7 @@ body{
 }
 
 .nada{
-    border: 1px solid #318B40; #763FC7 #33B3AE;  #EA4AAA;
+    border: 1px solid #318B40; /*#763FC7 #33B3AE;  #EA4AAA;*/
     box-shadow: 1px 1px 5px #763FC7 #33B3AE;
     color: #EA4AAA;
     background-color: #763FC7;
@@ -82,6 +82,7 @@ header > ul > li:first-child{
 }  
 
 
+
 header > ul > li > a , header > ul > li > ul> li a  {
     text-decoration: none;
     color:#33B3AE ;
@@ -94,8 +95,16 @@ header > ul > li > a , header > ul > li > ul> li a  {
 
 header > ul > li > ul> li a{
     font-size: 1.2em;
+
 }
 
+
+header > ul > li > ul> li > a:hover{
+    background: linear-gradient(#33B3AE ,  #33B3AE );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
 
 header > ul > li:nth-child(4){
     position: relative;
@@ -113,6 +122,10 @@ header > ul > li:nth-child(4) > ul {
 header > ul > li:nth-child(4):hover  > ul{
     height: max-content;
     visibility: visible;
+    background: #05070E;
+    border-radius: 0.4em;
+    padding: 1em 0.5em;
+    margin-top: 0.5em;
 }
 
 
@@ -132,7 +145,7 @@ header > ul > li:nth-child(4) > ul >li:hover > ul > a > li{
     height: max-content;
     margin: 0.5em;
     padding: 0.5em;
-    background: #080a0e9c;
+    background: #05070E;
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 1px #EA4AAA;
     border-left: 5px solid #EA4AAA;
@@ -182,7 +195,7 @@ header > ul > li > ul > li{
     justify-content: start;
     align-items: start;
     padding: 0.5em;
-    background: #080a0eda;
+    background: #05070E;
     backdrop-filter: blur(15px);
     box-shadow: 0px 0px 1px #33B3AE;
     border-left: 5px solid #33B3AE;
@@ -190,7 +203,7 @@ header > ul > li > ul > li{
 
 header > ul > li > ul > li:hover{
     border-left: 5px solid #EA4AAA;
-    background: #080a0eda;
+    background: #05070E;
 
 }
 
@@ -1025,7 +1038,6 @@ border: 1px solid gray;
          overflow: hidden;
          position: fixed;
          background: none;
-         top: 4em;
     }
 
     header ul > li{
@@ -1040,41 +1052,65 @@ border: 1px solid gray;
      }
  
      
-     header ul:hover{
-         height: 100vh;
+     header > ul:hover{
+         min-height: 100dvh;
          min-width: 50vw;
          z-index: 1;
          margin: 0;
-         box-shadow: -1px -1px 2px rgba(142, 143, 143, 0.158);
+         border: 1px solid #33B3AE;
          padding: 0;
          right:  0;
          width: 100%;
-         background: #00000794;
-         backdrop-filter: blur(5px);
-         top:-1em;
-
+         box-shadow: inset 1px 1px 1em #33B3AE;
+        top: 0;
+        overflow: visible;
      }
  
-     header ul:hover > li{
+     header > ul:hover > li{
         min-width: 100%;
         flex: 1;
-        box-shadow: 1px 1px 2px rgba(142, 143, 143, 0.158);
+        height: 16%;
+        border: 1px solid #33B3AE;
+        box-shadow:  1px 1px 1em #33B3AE;
      }
   
-     header ul:hover > li:first-child{
+     header > ul:hover > li:first-child{
         display: none;
      }
 
-     header ul > li:hover{
+     header > ul > li:hover{
         box-shadow:inset -1px -1px 3em #33B3AE; 
+        padding: 0;
+        overflow: visible;
     }
 
+    
+    header > ul > li:hover > ul{
+        min-width: 100%;
+        top: 0;
+        margin: 0;
+        padding: 0; 
+        left: -100%;
+        height: auto;
+        
+    }
+    
+    header > ul > li:hover > ul > li:hover > ul , header > ul > li > ul > li > ul > li:hover > ul{
+        position: relative;
+        min-width: 100%;
+    }
+    header > ul > li:hover > ul > li:hover > ul {
+        min-width: 100%;
+        right: 0;
+        font-size: 0.9em;
+    }
+    
 
     .main_text{
         font-size: 2em;
     }
     
-
+  
 
     .introduccion{
         padding: 0;
