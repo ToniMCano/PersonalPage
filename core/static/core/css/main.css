@@ -48,7 +48,6 @@ header > ul{
     flex: 4;  
     padding: 0.5em;
     border-radius: 0.3em;
-    background:none;
     flex-wrap: wrap;
     align-items: center;
     margin: 0;    
@@ -73,12 +72,6 @@ header > ul > li , header > ul > li > ul> li{
     flex:1;
     border-radius: 0.2em;
     padding: 0.3em;
-    background:none;
-}  
-
-
-header > ul > li:first-child{
-    background:none;
 }  
 
 
@@ -250,38 +243,72 @@ a{
     text-decoration: none;
 }
 
-
+strong{
+    color: #33B3AE;
+}
 .introduccion{
-    padding: 3em;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-   
-
 }
 
-.introduccion::before{
+
+.introduccion_home::before ,
+.introduccion-software::before,
+ .introduccion-web::before{
     content: '';
     background-image: url("/static/core/img2/circuit.png");
     background-size: contain; 
     background-repeat: no-repeat;
     background-attachment:scroll ; 
-    background-position:right;  
-  
-   position: absolute;
-   top: 1;
-   left: 0;
-   height: 50%;
-   width: 100%;
-   z-index: -1;
-   opacity: 0.6;
+    background-position:right center ;  
+    position: absolute;
+    top: 1;
+    left: 0;
+    height: 48%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
 }
 
-.introduccion >  p{
-    width: 50%;
+
+.introduccion-web::before{
+    background-image: url("/static/core/img/dw.png");
+}
+
+.introduccion-software::before{
+    background-image: url("/static/core/img/sw.png");
+}
+
+
+.introduccion > div{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rebeccapurple;
+    padding: 3em;
+    padding-right: 0;
+}
+
+.introduccion > div > div:nth-of-type(1) {
+    min-width: 65%;
+}
+
+.introduccion > div > div:nth-of-type(2){
+    border: 1px solid red;
+}
+
+.introduccion > div > div{
+    flex: 1;
+}
+
+.introduccion > div > div:last-of-type{
+  min-width: 100%;
+}
+
+.introduccion > div > div:last-of-type > p{
+    width: 65%;
     margin: 3em 0;
 }
-
 
 
 .introduccion a , .contacto span > a{
@@ -315,12 +342,9 @@ a{
     font-size: 3.5em;
     color:white;
     font-weight: 300;
+
 }
 
-
-.introduccion p{
-    width: 55%;
-}
 
 .introduccion strong{
     color: #33B3AE;
@@ -334,12 +358,13 @@ a{
     text-align: center;      
 } 
 
-
-.servicios strong{
+.servicios > article> ul > li > strong{
     color: #33B3AE;
     margin-right: 0.5em;
     font-size: 1.3em;
     font-weight: 300;
+    margin-left: 4em;
+    margin-bottom: 0.5em;
 }
 
 
@@ -355,27 +380,89 @@ a{
 
 .servicios  article ul{
     flex-direction: column ;
+    margin: 0;
     margin-top: 2em;
     display: flex;
     list-style: none;
 }
 
-.servicios article ul li{
+.servicios > article> ul > li , .servicios > article> ol > li{
     margin: 1em 0;
     flex: 1;
-    background: #080a0e4d;
+    background: none;
     backdrop-filter: blur(15px);
-    box-shadow: 0px 0px 1px #33B3AE;
     padding: 0.5em;
     text-align: left;
-    border-left: 5px solid  #33B3AE;
     width: fit-content;
-    border-radius: 0.2em;
+    border-radius: 0.4em;
     display: flex;
     flex-wrap: wrap;
+    display: flex;
+    align-items:  center;
+    width: auto;
+}
+
+.servicios > article> ul > li::before{
+    content: '';
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    background-image: url("/static/core/img/circle-check.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3em;
+
+}   
+
+.servicios > article> ul > li > strong{
+    width: 90%;
+    margin-left: 3em;
+}
+.servicios > article> ul > li > p{
+    margin: 0;
+    margin-left: 4em;
 }
 
 
+.casos > article {
+    display: flex;
+flex-direction: column;
+align-items: center;
+width: min-content;
+background:none;
+}
+
+.casos > article > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.casos > article > ul > li {
+    padding: 2em;
+    margin: 0.5em;
+    background: #0A0B10;
+    border-radius: 0.3em;
+    flex: 1;
+    border: 5px solid #33B3AE;
+    min-width: 300px;
+}
+.casos > article> ul > li > p{
+    padding-left: 0.2em;
+    font-size: 1.2em;
+    color: white;
+}
+.casos > article> ul > li > strong{
+    border-radius: 1em;
+    color: #33B3AE;
+    margin: 0;
+    height: 100%;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-right: 1em;
+}
 article{
     width: 65%;
     flex: 1;
@@ -522,7 +609,9 @@ article{
     margin: 0.5em;
     } 
     
-
+.main_services  li{
+    margin: 1em;
+}
 .ai_in {                                             /*SIRVE*/
     flex: 2;
     min-width: 65%;
@@ -607,7 +696,7 @@ article{
 }
 
 .id_servicios h2{
-    width: 90%;
+        width: 90%;
     text-align: center;
     margin-top: 2em;
     margin-bottom: 1.5em;
@@ -618,7 +707,7 @@ article{
 
 .id_servicios article{
     display: flex;
-    min-width: 330px;
+    min-width: 350px;
     justify-content: center;
     padding: 2em;
 }
@@ -883,6 +972,7 @@ border: 1px solid gray;
     min-width: 300px;
    flex: 1;
    position: relative;
+   background:#0A0B10;
 }
 
 
@@ -962,7 +1052,14 @@ border: 1px solid gray;
     margin: 0em;
 }
 
+#nuestro-compromiso > article , #por-que-elegirnos > article{
+    /*border: 3px solid  #EA4AAA;*/
+    box-shadow:  -2px -2px 8px #33B3AE, 2px 2px 8px #EA4AAA;
+}
 
+#nuestro-compromiso > article > ul > li > strong , #por-que-elegirnos > article > ul > li > strong{
+    color: #EA4AAA;
+}
 
 @media (width < 1200px){
 
@@ -976,10 +1073,6 @@ border: 1px solid gray;
 
     article p{
         width: 100%;
-    }
-
-    .introduccion > p{
-
     }
 
     
@@ -1012,16 +1105,28 @@ border: 1px solid gray;
     margin: 1em;
 }
 
+.introduccion > div{
+    flex-direction: column;
+}
 
 .final_p{                                                        /*SIRVE*/
     width: 90%;
 }
+
+
+
+.introduccion::before,
+.introduccion-web::before,
+.introduccion-software::before{
+    opacity: 0.1;
+}
+
 }
 
 
 
 
-@media (width < 725px){
+@media (width < 810px){
  
     header ul{
         height: 100vh;
@@ -1029,7 +1134,6 @@ border: 1px solid gray;
         margin: 0;
         position: absolute;
         right: 1em;
-        background: none;
         height: 3em;
          max-width: 3em;
          z-index: 1;
@@ -1037,13 +1141,9 @@ border: 1px solid gray;
          padding: 0;
          overflow: hidden;
          position: fixed;
-         background: none;
     }
 
-    header ul > li{
-      background: none;  
-    }
-    
+  
     /*-------------*/
     header svg{
         display: block;
@@ -1064,6 +1164,7 @@ border: 1px solid gray;
          box-shadow: inset 1px 1px 1em #33B3AE;
         top: 0;
         overflow: visible;
+        background: #05070E;
      }
  
      header > ul:hover > li{
@@ -1098,11 +1199,13 @@ border: 1px solid gray;
     header > ul > li:hover > ul > li:hover > ul , header > ul > li > ul > li > ul > li:hover > ul{
         position: relative;
         min-width: 100%;
+        padding: 0;
+        margin: 0; 
     }
     header > ul > li:hover > ul > li:hover > ul {
         min-width: 100%;
         right: 0;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     
 
@@ -1124,10 +1227,9 @@ border: 1px solid gray;
     }
 
 
-    .introduccion::before{
-        opacity: 0.1;
+    .id_servicios h2{
+        width: auto;
     }
-    
         
     article{
         width: 90%;
@@ -1172,6 +1274,7 @@ border: 1px solid gray;
         } 
 
 
+
     .main_services article{
         padding: 1em;
     }
@@ -1207,6 +1310,15 @@ border: 1px solid gray;
     }
 
 
+    .id_servicios article{
+        display: flex;
+        min-width: 320px;
+        justify-content: center;
+        padding: 1em;
+        margin: 0.5em;
+    }
+
+
     .final_p{
         margin:0;
         width: 95%;
@@ -1223,8 +1335,14 @@ border: 1px solid gray;
      margin: 0em;
     }
 
+    #soluciones-que-ofrecemos , #nuestro-compromiso{
+        margin-bottom: 3em;
+    }
 
-
+   article{
+        padding-bottom: 0;
+    }
+    
 
     
     .contacto > div{
@@ -1235,3 +1353,40 @@ border: 1px solid gray;
 }
 
 
+@media (width < 420px) {
+
+    .servicios > article> ul > li > strong{
+        font-size: 1.2em;
+    }
+
+
+    #beneficios_software > article> ul > li{
+        padding: 1em;
+        padding-top: 7em;
+    }
+
+    #beneficios_software  > article> ul > li > strong{
+        padding: 1em 0;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    #beneficios_software  > article> ul > li::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url("/static/core/img/circle-check.png");
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: 5em;
+        top: 1.5em;
+        z-index: -1;
+        left: 0;
+    }   
+
+    #beneficios_software > article> ul > li > p , #beneficios_software > article> ul > li > strong{  
+        margin-left: 0;
+    }
+}
