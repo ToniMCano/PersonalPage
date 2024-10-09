@@ -315,7 +315,15 @@ strong{
     color: #33B3AE;
 }
 
-
+.introduccion h2{
+    font-weight: 300;
+    background:  #33B3AE;
+    border-radius: 0.3em;
+    width: fit-content;
+    padding: 0.3em 0.5em;   
+    color: #0A0B10;
+    margin: 0;
+}
 .main_text{
     padding: 0;
     text-align: left;
@@ -1032,7 +1040,7 @@ border: 1px solid gray;
     margin: 0em;
 }
 
-#nuestro-compromiso > article , #por-que-elegirnos > article{
+.compromiso > article , #por-que-elegirnos > article{
     /*border: 3px solid  #EA4AAA;*/
     box-shadow:  -2px -2px 8px #33B3AE, 2px 2px 8px #EA4AAA;
 }
@@ -1057,7 +1065,7 @@ border: 1px solid gray;
 
     
     .introduccion p{
-        width:95%;
+        min-    width:95%;
         margin: 1em 0 2em 0em;
         
     }
@@ -1188,7 +1196,10 @@ border: 1px solid gray;
     }
     
 
-    
+        .main_text{
+            font-size: 2.5em;
+        }
+        
 
     .id_servicios h2{
         width: auto;
@@ -1243,13 +1254,18 @@ border: 1px solid gray;
         padding: 0;
     }
 
-    .main_services > article > div > div > ul > a > li {
+    /*.main_services > article > div > div > ul > a > li {
         width: 100%;
         display: flex;
         justify-content: center;
+    }*/
+
+    .introduccion{
+        padding: 1.5em;
     }
-
-
+    .introduccion p{
+        width: 100%;
+    }
     .flow{
         padding: 1em;
     }
@@ -1325,12 +1341,21 @@ border: 1px solid gray;
         padding: 1em;
     }
 
-    .id_servicios > h2{
-        font-size: 2.5em;
+
+    .introduccion h2{
+        font-size: 1.2em;
     }
+
+
     .introduccion > p{
         width: 100%;
     }
+    
+
+    .id_servicios > h2{
+        font-size: 2.5em;
+    }
+
 
     .servicios > article> ul > li{
         justify-content: center;
@@ -1339,7 +1364,7 @@ border: 1px solid gray;
     .servicios > article> ul > li > strong{
         font-size: 1.2em;
         margin: 0;
-        margin-top: 5.5em;
+        margin-top: 0.5em;
         margin-bottom: 1em;
         width: 100%;
     }
@@ -1375,7 +1400,7 @@ border: 1px solid gray;
     }
 
     #beneficios_software  > article> ul > li > strong{
-        padding: 1em 0;
+        padding: 0;
         width: 100%;
         text-align: center;
 
@@ -1397,5 +1422,11 @@ border: 1px solid gray;
 
     #beneficios_software > article> ul > li > p , #beneficios_software > article> ul > li > strong{  
         margin-left: 0;
-    }
+    }    
+
+    
+    #nuestro-compromiso > article > ul > li > strong , #por-que-elegirnos > article > ul > li > strong{
+        padding-top: 5em;
+        color: #EA4AAA;
+        text-align: center;
 }
