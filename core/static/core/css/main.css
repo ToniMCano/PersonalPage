@@ -401,7 +401,7 @@ strong{
     width: auto;
 }
 
-.servicios > article> ul > li::before{
+.beneficios > li::before , .nobg > li::before{
     content: '';
     position: absolute;
     height: 3em;
@@ -412,6 +412,14 @@ strong{
     background-size: 3em;
 
 }   
+
+.numbers > li > strong > span{
+    position: absolute;
+    left: 0.2em; /* Mueve el elemento al 50% de la izquierda */
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 3em;
+}
 
 
 .servicios > article> ul > li > strong{
@@ -724,10 +732,12 @@ article{
     color: #33B3AE ;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     font-weight: 300;
     font-size: 1.4em;
     margin: 0;
+
+    
  }
 
 
@@ -1064,6 +1074,9 @@ border: 1px solid gray;
     color: #EA4AAA;
 }
 
+#por-que-elegirnos span{
+    color: #763FC7;
+}
 @media (width < 1200px){
 
     .union article > ul {
@@ -1417,7 +1430,7 @@ border: 1px solid gray;
     }
 
 
-    .servicios > article> ul > li::before{
+    .beneficios > li::before , .nobg > li::before{
         content: '';
         position: absolute;
         height: 7em;
@@ -1463,6 +1476,26 @@ border: 1px solid gray;
         left: 0;
     }   
 
+    .numbers > li > strong{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .numbers > li > strong > span{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.3em;
+        font-weight: 700;
+        width: 100%;
+        transform: translateY(0%);
+    }
+
+
     #beneficios_software > article> ul > li > p , #beneficios_software > article> ul > li > strong{  
         margin-left: 0;
     }    
@@ -1472,4 +1505,6 @@ border: 1px solid gray;
         padding-top: 5.5em;
         color: #EA4AAA;
         text-align: center;
+    }
+
 }
