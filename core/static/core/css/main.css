@@ -253,9 +253,10 @@ strong{
 }
 
 
-.introduccion_home::before ,
+.introduccion-home::before ,
 .introduccion-software::before,
- .introduccion-web::before{
+ .introduccion-web::before,
+ .introduccion-ia::before{
     content: '';
     background-image: url("/static/core/img2/circuit.png");
     background-size: contain; 
@@ -278,6 +279,10 @@ strong{
 
 .introduccion-software::before{
     background-image: url("/static/core/img/sw.png");
+}
+
+.introduccion-ia::before{
+    background-image: url("/static/core/img/ia.png");
 }
 
 
@@ -362,7 +367,13 @@ strong{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-   
+}
+
+.union{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -401,6 +412,7 @@ strong{
     background-size: 3em;
 
 }   
+
 
 .servicios > article> ul > li > strong{
     width: 90%;
@@ -678,6 +690,7 @@ article{
     flex-direction: row;
     width: 80%  ;
     align-self: center;
+    align-items: stretch;
     
 }
 
@@ -690,7 +703,6 @@ article{
 }
 
 
-
 .id_servicios article{
     display: flex;
     min-width: 350px;
@@ -701,7 +713,7 @@ article{
 
 .id_servicios article > div{
     flex: 1;
-    min-height: 12em;
+    /*min-height: 15em;*/
     display: flex;
     flex-wrap: wrap;
     padding: 0em;
@@ -710,7 +722,6 @@ article{
 
 .id_servicios article > div > h3 {
     color: #33B3AE ;
-    margin: 0.5em ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -718,6 +729,7 @@ article{
     font-size: 1.4em;
     margin: 0;
  }
+
 
  .id_servicios article > div > div {
     display: flex;
@@ -730,7 +742,8 @@ article{
     font-weight: 300;
     font-size: 1.4em;
     margin: 0;
-     margin-right: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
  }
 
 
@@ -923,10 +936,12 @@ border: 1px solid gray;
     box-shadow: 0px 0px 0px #33B3AE;  
     color: white;
     border-left: 0;
-  
+    margin: 1em 0;
     padding: 0;
     padding-right: 0.4em;
     border-radius: 0.2em;
+    flex-wrap: wrap;
+    background: black;
 }
 
 .union article > ul > li > h3{
@@ -1453,7 +1468,7 @@ border: 1px solid gray;
     }    
 
 
-    #nuestro-compromiso > article > ul > li > strong , #por-que-elegirnos > article > ul > li > strong{
+    .beneficios strong , .nobg strong{
         padding-top: 5.5em;
         color: #EA4AAA;
         text-align: center;

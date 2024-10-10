@@ -10,5 +10,5 @@ def software(request):
 
 def empresarial(request):
     
-    return render(request , "software/sistemas-de-gestion-empresarial.html" , {'title': 'Desarrollo de Software a Medida | Soluciones Personalizadas para tu Empresa'})
+    return render(request , "software/sistemas-de-gestion-empresarial.html" , {'title': 'Sistemas de Gestión Empresarial'})
 
