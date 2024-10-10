@@ -1077,6 +1077,15 @@ border: 1px solid gray;
 #por-que-elegirnos span{
     color: #763FC7;
 }
+
+#caso-de-uso h2{
+    color: #EA4AAA;
+    font-weight: 300;
+    border:  2px solid #33B3AE;
+    background: black;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
 @media (width < 1200px){
 
     .union article > ul {
@@ -1445,6 +1454,7 @@ border: 1px solid gray;
     
     .servicios > article> ul > li > p{
         margin: 0;
+        padding: 0.7em;
   
     }
     
