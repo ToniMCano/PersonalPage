@@ -253,9 +253,10 @@ strong{
 }
 
 
-.introduccion_home::before ,
+.introduccion-home::before ,
 .introduccion-software::before,
- .introduccion-web::before{
+ .introduccion-web::before,
+ .introduccion-ia::before{
     content: '';
     background-image: url("/static/core/img2/circuit.png");
     background-size: contain; 
@@ -278,6 +279,10 @@ strong{
 
 .introduccion-software::before{
     background-image: url("/static/core/img/sw.png");
+}
+
+.introduccion-ia::before{
+    background-image: url("/static/core/img/ia.png");
 }
 
 
@@ -362,7 +367,13 @@ strong{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-   
+}
+
+.union{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -390,7 +401,7 @@ strong{
     width: auto;
 }
 
-.servicios > article> ul > li::before{
+.beneficios > li::before , .nobg > li::before{
     content: '';
     position: absolute;
     height: 3em;
@@ -401,6 +412,15 @@ strong{
     background-size: 3em;
 
 }   
+
+.numbers > li > strong > span{
+    position: absolute;
+    left: 0.2em; /* Mueve el elemento al 50% de la izquierda */
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 3em;
+}
+
 
 .servicios > article> ul > li > strong{
     width: 90%;
@@ -678,6 +698,7 @@ article{
     flex-direction: row;
     width: 80%  ;
     align-self: center;
+    align-items: stretch;
     
 }
 
@@ -690,7 +711,6 @@ article{
 }
 
 
-
 .id_servicios article{
     display: flex;
     min-width: 350px;
@@ -701,7 +721,7 @@ article{
 
 .id_servicios article > div{
     flex: 1;
-    min-height: 12em;
+    /*min-height: 15em;*/
     display: flex;
     flex-wrap: wrap;
     padding: 0em;
@@ -710,14 +730,16 @@ article{
 
 .id_servicios article > div > h3 {
     color: #33B3AE ;
-    margin: 0.5em ;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     font-weight: 300;
     font-size: 1.4em;
     margin: 0;
+
+    
  }
+
 
  .id_servicios article > div > div {
     display: flex;
@@ -730,7 +752,8 @@ article{
     font-weight: 300;
     font-size: 1.4em;
     margin: 0;
-     margin-right: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
  }
 
 
@@ -923,10 +946,12 @@ border: 1px solid gray;
     box-shadow: 0px 0px 0px #33B3AE;  
     color: white;
     border-left: 0;
-  
+    margin: 1em 0;
     padding: 0;
     padding-right: 0.4em;
     border-radius: 0.2em;
+    flex-wrap: wrap;
+    background: black;
 }
 
 .union article > ul > li > h3{
@@ -1049,6 +1074,18 @@ border: 1px solid gray;
     color: #EA4AAA;
 }
 
+#por-que-elegirnos span{
+    color: #763FC7;
+}
+
+#caso-de-uso h2{
+    color: #EA4AAA;
+    font-weight: 300;
+    border:  2px solid #33B3AE;
+    background: black;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
 @media (width < 1200px){
 
     .union article > ul {
@@ -1402,7 +1439,7 @@ border: 1px solid gray;
     }
 
 
-    .servicios > article> ul > li::before{
+    .beneficios > li::before , .nobg > li::before{
         content: '';
         position: absolute;
         height: 7em;
@@ -1417,6 +1454,7 @@ border: 1px solid gray;
     
     .servicios > article> ul > li > p{
         margin: 0;
+        padding: 0.7em;
   
     }
     
@@ -1448,13 +1486,35 @@ border: 1px solid gray;
         left: 0;
     }   
 
+    .numbers > li > strong{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .numbers > li > strong > span{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.3em;
+        font-weight: 700;
+        width: 100%;
+        transform: translateY(0%);
+    }
+
+
     #beneficios_software > article> ul > li > p , #beneficios_software > article> ul > li > strong{  
         margin-left: 0;
     }    
 
 
-    #nuestro-compromiso > article > ul > li > strong , #por-que-elegirnos > article > ul > li > strong{
+    .beneficios strong , .nobg strong{
         padding-top: 5.5em;
         color: #EA4AAA;
         text-align: center;
+    }
+
 }
